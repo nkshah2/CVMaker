@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/colorHighlight">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:id="@+id/llExperienceInformation"
+        android:background="@drawable/roundedrectangledata"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llExp1"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Experience 1"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name"
+                android:id="@+id/etCoName1"
+                android:inputType="textCapSentences"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration Eg. Oct 2013 - Present"
+                android:id="@+id/etDuration1"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Project Name"
+                android:id="@+id/etProName1"
+                android:inputType="textCapSentences"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Role/Designation"
+                android:id="@+id/etRole1"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Role Description"
+                android:id="@+id/etRoleDesc1"
+                android:inputType="textMultiLine"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:id="@+id/etProDesc1"
+                android:inputType="textMultiLine|textCapSentences"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llExp2"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Experience 2"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name"
+                android:id="@+id/etCoName2"
+                android:inputType="textCapSentences"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration Eg. Oct 2013 - Present"
+                android:id="@+id/etDuration2"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Project Name"
+                android:id="@+id/etProName2"
+                android:inputType="textCapSentences"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Role/Designation"
+                android:id="@+id/etRole2"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Role Description"
+                android:id="@+id/etRoleDesc2"
+                android:inputType="textMultiLine"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:id="@+id/etProDesc2"
+                android:inputType="textMultiLine|textCapSentences"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llExp3"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Experience 3"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name"
+                android:id="@+id/etCoName3"
+                android:inputType="textCapSentences"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration Eg. Oct 2013 - Present"
+                android:id="@+id/etDuration3"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Project Name"
+                android:id="@+id/etProName3"
+                android:inputType="text"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Role/Designation"
+                android:id="@+id/etRole3"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Role Description"
+                android:id="@+id/etRoleDesc3"
+                android:inputType="textMultiLine"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:id="@+id/etProDesc3"
+                android:inputType="textMultiLine|textCapSentences"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llExp4"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Experience 4"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name"
+                android:id="@+id/etCoName4"
+                android:inputType="textCapSentences"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration Eg. Oct 2013 - Present"
+                android:id="@+id/etDuration4"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Project Name"
+                android:id="@+id/etProName4"
+                android:inputType="text"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Role/Designation"
+                android:id="@+id/etRole4"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Role Description"
+                android:id="@+id/etRoleDesc4"
+                android:inputType="textMultiLine"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:id="@+id/etProDesc4"
+                android:inputType="textMultiLine|textCapSentences"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llExp5"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Experience 5"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name"
+                android:id="@+id/etCoName5"
+                android:inputType="textCapSentences"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration Eg. Oct 2013 - Present"
+                android:id="@+id/etDuration5"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Project Name"
+                android:id="@+id/etProName5"
+                android:inputType="text"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Role/Designation"
+                android:id="@+id/etRole5"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Role Description"
+                android:id="@+id/etRoleDesc5"
+                android:inputType="textMultiLine"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Project Description"
+                android:id="@+id/etProDesc5"
+                android:inputType="textMultiLine|textCapSentences"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llExp6"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Experience 6"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name"
+                android:id="@+id/etCoName6"
+                android:inputType="textCapSentences"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration Eg. Oct 2013 - Present"
+                android:id="@+id/etDuration6"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Project Name"
+                android:id="@+id/etProName6"
+                android:inputType="text"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Role/Designation"
+                android:id="@+id/etRole6"
+                android:inputType="textCapSentences"
+                />
+
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:hint="Role Description"
+                android:id="@+id/etRoleDesc6"
+                android:inputType="textMultiLine"
+                />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:id="@+id/etProDesc6"
+                android:inputType="textMultiLine|textCapSentences"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_remove_black_18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:id="@+id/removeExperience"
+                android:visibility="gone"
+                />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add_black_18dp"
+                android:layout_alignParentStart="true"
+                android:layout_margin="5dp"
+                android:id="@+id/addExperience"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

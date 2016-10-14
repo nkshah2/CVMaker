@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "525670614809",
+    "firebase_url": "https://project-8067829581051948808.firebaseio.com",
+    "project_id": "project-8067829581051948808",
+    "storage_bucket": "project-8067829581051948808.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525670614809:android:d2d99254b1b1be8e",
+        "android_client_info": {
+          "package_name": "nksystems.cvmaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525670614809-jvcsmt5j8s6naoth3nrac15lbc1mlakg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpUVrH6telFSxJU8u6u8_E3Ji4GmCMpSs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

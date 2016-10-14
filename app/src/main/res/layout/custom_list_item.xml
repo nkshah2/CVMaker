@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="horizontal" android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+
+    <!--&gt;-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_weight="2"-->
+        <!--android:id="@+id/tvName"-->
+        <!--android:padding="11dp"-->
+        <!--/>-->
+
+
+
+<!--</LinearLayout>-->
+
+    <RelativeLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/google_docs"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/imgLogo"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitle"
+        android:text="Name"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/imgLogo"
+        android:layout_toEndOf="@+id/imgLogo"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_centerVertical="true"
+        android:id="@+id/tvDate"
+        android:textSize="15dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_toEndOf="@+id/imgLogo"
+        android:layout_marginLeft="10dp"
+        />
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignTop="@+id/imgLogo"-->
+        <!--android:layout_toEndOf="@+id/imgLogo"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="45dp"-->
+        <!--&gt;-->
+        <!--<ImageButton-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:background="@drawable/custome_shape_oval"-->
+            <!--android:src="@drawable/ic_create_black_18dp"-->
+            <!--android:padding="1dp"-->
+            <!--android:id="@+id/btEdit"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--/>-->
+
+        <!--<ImageButton-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:background="@drawable/custome_shape_oval"-->
+            <!--android:src="@drawable/ic_delete_black_18dp"-->
+            <!--android:padding="1dp"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:id="@+id/btDelete"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--/>-->
+
+        <!--<ImageButton-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:background="@drawable/custome_shape_oval"-->
+            <!--android:src="@drawable/ic_share_black_16dp"-->
+            <!--android:padding="1dp"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:id="@+id/btShare"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:id="@+id/btMenu"
+        android:scaleType="centerInside"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_more_vert_grey600_16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

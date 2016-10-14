@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/colorHighlight">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/llECInformation"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/roundedrectangledata"
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etEC1"
+            android:hint="Activity 1"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="6"
+            android:nestedScrollingEnabled="true"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etEC2"
+            android:hint="Activity 2"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="6"
+            android:nestedScrollingEnabled="true"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etEC3"
+            android:hint="Activity 3"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="6"
+            android:nestedScrollingEnabled="true"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etEC4"
+            android:hint="Activity 4"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="6"
+            android:nestedScrollingEnabled="true"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etEC5"
+            android:hint="Activity 5"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="6"
+            android:nestedScrollingEnabled="true"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etEC6"
+            android:hint="Activity 6"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="6"
+            android:nestedScrollingEnabled="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_remove_black_18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:id="@+id/removeEC"
+                android:visibility="gone"
+                />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add_black_18dp"
+                android:layout_alignParentStart="true"
+                android:layout_margin="5dp"
+                android:id="@+id/addEC"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
