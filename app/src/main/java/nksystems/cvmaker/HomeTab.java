@@ -68,6 +68,8 @@ public class HomeTab extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        Log.i("Test","This should show in git");
+
         dbObject=new DatabaseObject(HomeTab.this.getContext());
         theme=dbObject.getConnection();
         Cursor cursor=theme.rawQuery("select * from database_theme",null);
