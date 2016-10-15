@@ -68,7 +68,7 @@ public class HomeTab extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        Log.i("Test","This should show in git");
+        Log.i("Test","This should show in git again");
 
         dbObject=new DatabaseObject(HomeTab.this.getContext());
         theme=dbObject.getConnection();
