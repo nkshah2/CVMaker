@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CVMakerVersion.iml" filepath="$PROJECT_DIR$/CVMakerVersion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CVMakerGoogle.iml" filepath="$PROJECT_DIR$/CVMakerGoogle.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
