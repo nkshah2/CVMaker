@@ -15,7 +15,8 @@ import java.util.List;
 
 import nksystems.cvmaker.adapter.ThemeRecyclerAdapter;
 
-public class activity_settings extends AppCompatActivity {
+public class
+activity_settings extends AppCompatActivity {
 
 
     DatabaseObject dbObject;
