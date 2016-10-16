@@ -2580,10 +2580,10 @@ public class CreateResume extends AppCompatActivity {
             paraAddress.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraAddress);
         }
-        pdfDocument.add(Chunk.NEWLINE);
         if(myCursor.getString(myCursor.getColumnIndex("objective")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("objective")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("objective")).length() > 0){
+            pdfDocument.add(Chunk.NEWLINE);
             Paragraph paraObjectiveHead = new Paragraph("OBJECTIVE", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD));
             pdfDocument.add(paraObjectiveHead);
             LineSeparator lsObjective = new LineSeparator();
@@ -2592,10 +2592,10 @@ public class CreateResume extends AppCompatActivity {
                     new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraObjective);
         }
-        pdfDocument.add(Chunk.NEWLINE);
         if(myCursor.getString(myCursor.getColumnIndex("highestedu")) != null &&
                 !myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Select") &&
                 myCursor.getString(myCursor.getColumnIndex("highestedu")).length() > 0){
+            pdfDocument.add(Chunk.NEWLINE);
             Paragraph paraEduHead = new Paragraph("EDUCATION", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD));
             pdfDocument.add(paraEduHead);
             LineSeparator lsEducation = new LineSeparator();
@@ -2780,10 +2780,10 @@ public class CreateResume extends AppCompatActivity {
             /*Paragraph paraEducation = new Paragraph("Some Education", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraEducation);*/
         }
-        pdfDocument.add(Chunk.NEWLINE);
          if(myCursor.getString(myCursor.getColumnIndex("certtitle1")) != null &&
                  myCursor.getString(myCursor.getColumnIndex("certtitle1")) != "" &&
                  myCursor.getString(myCursor.getColumnIndex("certtitle1")).length() > 0){
+             pdfDocument.add(Chunk.NEWLINE);
              Paragraph paraCertHead = new Paragraph("CERTIFICATIONS", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD));
              pdfDocument.add(paraCertHead);
              LineSeparator lsCertifications = new LineSeparator();
@@ -2813,10 +2813,10 @@ public class CreateResume extends AppCompatActivity {
                     new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraCertifications);*/
         }
-        pdfDocument.add(Chunk.NEWLINE);
         if(myCursor.getString(myCursor.getColumnIndex("companyname1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("companyname1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("companyname1")).length() > 0){
+            pdfDocument.add(Chunk.NEWLINE);
             Paragraph paraExpHead = new Paragraph("WORK EXPERIENCE", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD));
             pdfDocument.add(paraExpHead);
             LineSeparator lsWorkExp = new LineSeparator();
@@ -2870,10 +2870,10 @@ public class CreateResume extends AppCompatActivity {
             }
             pdfDocument.add(workTable);
         }
-        pdfDocument.add(Chunk.NEWLINE);
         if(myCursor.getString(myCursor.getColumnIndex("achievedesc1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("achievedesc1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("achievedesc1")).length() > 0){
+            pdfDocument.add(Chunk.NEWLINE);
             Paragraph paraAchieveHead = new Paragraph("ACHIEVEMENTS", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD));
             pdfDocument.add(paraAchieveHead);
             LineSeparator lsAchievements = new LineSeparator();
@@ -2898,10 +2898,10 @@ public class CreateResume extends AppCompatActivity {
             }
             pdfDocument.add(AchList);
         }
-        pdfDocument.add(Chunk.NEWLINE);
         if(myCursor.getString(myCursor.getColumnIndex("skillarea1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("skillarea1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("skillarea1")).length() > 0){
+            pdfDocument.add(Chunk.NEWLINE);
             Paragraph paraTSHead = new Paragraph("TECHNICAL SKILLS", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD));
             pdfDocument.add(paraTSHead);
             LineSeparator lsTSkills = new LineSeparator();
@@ -2953,10 +2953,10 @@ public class CreateResume extends AppCompatActivity {
             }
             pdfDocument.add(skillsTable);
         }
-        pdfDocument.add(Chunk.NEWLINE);
         if(myCursor.getString(myCursor.getColumnIndex("extracurr1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("extracurr1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("extracurr1")).length() > 0){
+            pdfDocument.add(Chunk.NEWLINE);
             Paragraph paraAct = new Paragraph("EXTRA CURRICULAR ACTIVITIES", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD));
             pdfDocument.add(paraAct);
             LineSeparator lsActivities = new LineSeparator();
@@ -2981,10 +2981,10 @@ public class CreateResume extends AppCompatActivity {
             }
             pdfDocument.add(ECList);
         }
-        pdfDocument.add(Chunk.NEWLINE);
         if(myCursor.getString(myCursor.getColumnIndex("interestdesc")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("interestdesc")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("interestdesc")).length() > 0){
+            pdfDocument.add(Chunk.NEWLINE);
             Paragraph paraPI = new Paragraph("PERSONAL INTERESTS", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.BOLD));
             pdfDocument.add(paraPI);
             LineSeparator lsPI = new LineSeparator();
@@ -3027,10 +3027,10 @@ public class CreateResume extends AppCompatActivity {
             paraAddress.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraAddress);
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("objective")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("objective")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("objective")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3046,10 +3046,10 @@ public class CreateResume extends AppCompatActivity {
                     new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraObjective);
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("highestedu")) != null &&
                 !myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Select") &&
                 myCursor.getString(myCursor.getColumnIndex("highestedu")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3246,10 +3246,10 @@ public class CreateResume extends AppCompatActivity {
             /*Paragraph paraEducation = new Paragraph("Some Education", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraEducation);*/
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("certtitle1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("certtitle1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("certtitle1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3287,10 +3287,10 @@ public class CreateResume extends AppCompatActivity {
                     new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraCertifications);*/
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("companyname1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("companyname1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("companyname1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3355,10 +3355,10 @@ public class CreateResume extends AppCompatActivity {
             /*Paragraph paraWorkExp = new Paragraph("Some Work Experience", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraWorkExp);*/
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("achievedesc1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("achievedesc1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("achievedesc1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3394,10 +3394,10 @@ public class CreateResume extends AppCompatActivity {
                     new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraAchievements);*/
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("skillarea1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("skillarea1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("skillarea1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3459,10 +3459,10 @@ public class CreateResume extends AppCompatActivity {
                     new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraTSkills);*/
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("extracurr1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("extracurr1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("extracurr1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3498,10 +3498,10 @@ public class CreateResume extends AppCompatActivity {
                     new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
             pdfDocument.add(paraActivities);*/
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("interestdesc")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("interestdesc")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("interestdesc")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3557,17 +3557,16 @@ public class CreateResume extends AppCompatActivity {
             paraEmail.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraEmail);
         }
-        pdfDocument.add(new Paragraph(" "));
 
         if(myCursor.getString(myCursor.getColumnIndex("objective")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("objective")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("objective")).length()>0){
+            pdfDocument.add(new Paragraph(" "));
             Paragraph paraObjective = new Paragraph(myCursor.getString(myCursor.getColumnIndex("objective")),
                     new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL));
             pdfDocument.add(paraObjective);
         }
 
-        pdfDocument.add(new Paragraph(" "));
         float[] columnWidths = {3, 7};
         Font headerFont = new Font(Font.FontFamily.TIMES_ROMAN, 16, Font.BOLD);
         Font contentFont = new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL);
@@ -3575,6 +3574,7 @@ public class CreateResume extends AppCompatActivity {
         if(myCursor.getString(myCursor.getColumnIndex("highestedu")) != null &&
                 !myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Select") &&
                 myCursor.getString(myCursor.getColumnIndex("highestedu")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable tableEdu = new PdfPTable(columnWidths);
             tableEdu.setWidthPercentage(100);
             tableEdu.getDefaultCell().setUseAscender(true);
@@ -3770,10 +3770,10 @@ public class CreateResume extends AppCompatActivity {
             tableEdu.addCell(contentcellEdu);
             pdfDocument.add(tableEdu);
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("certtitle1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("certtitle1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("certtitle1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
 
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
@@ -3816,10 +3816,10 @@ public class CreateResume extends AppCompatActivity {
             table.addCell(contentcellExp);
             pdfDocument.add(table);
         }
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("companyname1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("companyname1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("companyname1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable table = new PdfPTable(columnWidths);
             table.setWidthPercentage(100);
             table.getDefaultCell().setUseAscender(true);
@@ -3887,10 +3887,10 @@ public class CreateResume extends AppCompatActivity {
             pdfDocument.add(table);
         }
 
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("achievedesc1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("achievedesc1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("achievedesc1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable tableAchieve = new PdfPTable(columnWidths);
             tableAchieve.setWidthPercentage(100);
             tableAchieve.getDefaultCell().setUseAscender(true);
@@ -3931,10 +3931,10 @@ public class CreateResume extends AppCompatActivity {
             pdfDocument.add(tableAchieve);
         }
 
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("skillarea1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("skillarea1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("skillarea1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable tableSkill = new PdfPTable(columnWidths);
             tableSkill.setWidthPercentage(100);
             tableSkill.getDefaultCell().setUseAscender(true);
@@ -4000,10 +4000,10 @@ public class CreateResume extends AppCompatActivity {
             pdfDocument.add(tableSkill);
         }
 
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("extracurr1")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("extracurr1")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("extracurr1")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable tableAct = new PdfPTable(columnWidths);
             tableAct.setWidthPercentage(100);
             tableAct.getDefaultCell().setUseAscender(true);
@@ -4044,10 +4044,10 @@ public class CreateResume extends AppCompatActivity {
             pdfDocument.add(tableAct);
         }
 
-        pdfDocument.add(new Paragraph(" "));
         if(myCursor.getString(myCursor.getColumnIndex("interestdesc")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("interestdesc")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("interestdesc")).length() > 0){
+            pdfDocument.add(new Paragraph(" "));
             PdfPTable tablePI = new PdfPTable(columnWidths);
             tablePI.setWidthPercentage(100);
             tablePI.getDefaultCell().setUseAscender(true);
