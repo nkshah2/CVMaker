@@ -10,6 +10,33 @@
 
         />
 
+    <item
+        android:id="@+id/rateus"
+        android:title="Rate Us"
+        android:icon="@drawable/ic_settings_white_18dp"
+        android:showAsAction="always"
+        android:orderInCategory="0"
+
+        />
+
+    <item
+        android:id="@+id/removeads"
+        android:title="Remove Ads"
+        android:icon="@drawable/ic_settings_white_18dp"
+        android:showAsAction="always"
+        android:orderInCategory="0"
+
+        />
+
+    <item
+        android:id="@+id/help"
+        android:title="Help"
+        android:icon="@drawable/ic_settings_white_18dp"
+        android:showAsAction="always"
+        android:orderInCategory="0"
+
+        />
+
 
 
 
