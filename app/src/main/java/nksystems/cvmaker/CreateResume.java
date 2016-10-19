@@ -17,6 +17,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +42,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.ToxicBakery.viewpager.transforms.RotateDownTransformer;
+import com.ToxicBakery.viewpager.transforms.RotateUpTransformer;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -63,6 +66,7 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.draw.LineSeparator;
 import com.itextpdf.text.pdf.parser.Line;
+import com.viewpagerindicator.UnderlinePageIndicator;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -77,6 +81,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import github.chenupt.springindicator.SpringIndicator;
 import nksystems.cvmaker.adapter.ResumeAdapter;
 import nksystems.cvmaker.createresume.AchievementDetails;
 import nksystems.cvmaker.createresume.CertificationDetails;
@@ -96,7 +101,7 @@ public class CreateResume extends AppCompatActivity {
     ImageButton addCertification,removeCertification,addExperience,removeExperience,addAchievement,removeAchievement,addSkill,removeSkill,addEC,removeEC;
     EditText txtObjective, txtName, txtFilename, txtTemplate;
     DatabaseQueries dbQueries;
-    Button btnSave;
+    FloatingActionButton btnSave;
     LinearLayout ten,twelve,llHobbyTab,llHobbyInformation,college,diploma,graduate,certificationTab,certificationInformation, experienceInformation, experienceTab,achievementsTab, achievementsInformation, skillsTab, skillsInformation,ECTab, ECInformation;
     int certCount=1,expCount=1,achieveCount=1,skillCount=1,ecCount=1;
     Spinner mySpinner,spinnerTemplate,spinnerHighestEdu,spinnerTitle;
@@ -238,6 +243,9 @@ public class CreateResume extends AppCompatActivity {
 
 
         setContentView(R.layout.common_resume_layout);
+
+
+
         dbQueries=new DatabaseQueries(CreateResume.this);
         final Animation slide_down = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.slide_down);
@@ -254,6 +262,11 @@ public class CreateResume extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.resume_main);
         resumeAdapter = new ResumeAdapter(getSupportFragmentManager());
         viewPager.setAdapter(resumeAdapter);
+
+
+        UnderlinePageIndicator indicator=(UnderlinePageIndicator)findViewById(R.id.indicator);
+        indicator.setViewPager(viewPager);
+
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
             @Override
@@ -1476,58 +1489,76 @@ public class CreateResume extends AppCompatActivity {
             txtTemplate.setText(getIntent().getExtras().getString("template"));
         }*/
 
-        btnSave = (Button)findViewById(R.id.btnSave);
+        btnSave = (FloatingActionButton) findViewById(R.id.btnSaveFab);
 
         Drawable myDrawable=btnSave.getBackground();
         int color;
+
+
         switch (currentTheme.toLowerCase()){
             case "red":
                 myDrawable.clearColorFilter();
                 color= ContextCompat.getColor(this,R.color.redColorAccent);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.CLEAR);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                indicator.setSelectedColor(getResources().getColor(R.color.redColorAccent));
                 break;
             case "pink":
                 myDrawable.clearColorFilter();
                 color= ContextCompat.getColor(this,R.color.pinkColorAccent);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.CLEAR);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                indicator.setSelectedColor(getResources().getColor(R.color.pinkColorAccent));
                 break;
             case "purple":
                 myDrawable.clearColorFilter();
                 color= ContextCompat.getColor(this,R.color.purpleColorAccent);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.CLEAR);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                indicator.setSelectedColor(getResources().getColor(R.color.purpleColorAccent));
                 break;
             case "blue":
                 myDrawable.clearColorFilter();
                 color= ContextCompat.getColor(this,R.color.blueColorAccent);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.CLEAR);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                indicator.setSelectedColor(getResources().getColor(R.color.blueColorAccent));
                 break;
             case "green":
                 myDrawable.clearColorFilter();
                 color= ContextCompat.getColor(this,R.color.greenColorAccent);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.CLEAR);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                indicator.setSelectedColor(getResources().getColor(R.color.greenColorAccent));
                 break;
             case "yellow":
                 myDrawable.clearColorFilter();
                 color= ContextCompat.getColor(this,R.color.yellowColorAccent);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.CLEAR);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                indicator.setSelectedColor(getResources().getColor(R.color.yellowColorAccent));
                 break;
             case "orange":
                 myDrawable.clearColorFilter();
                 color= ContextCompat.getColor(this,R.color.orangeColorAccent);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.CLEAR);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                indicator.setSelectedColor(getResources().getColor(R.color.orangeColorAccent));
                 break;
             case "grey":
                 myDrawable.clearColorFilter();
                 color= ContextCompat.getColor(this,R.color.greyColorAccent);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.CLEAR);
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
+
+                indicator.setSelectedColor(getResources().getColor(R.color.greyColorAccent));
                 break;
         }
         btnSave.setOnClickListener(new View.OnClickListener(){

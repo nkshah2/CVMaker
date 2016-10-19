@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    android:background="@color/colorHighlight">
+    android:background="@color/bgColor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,7 +15,6 @@
         android:orientation="vertical"
         android:id="@+id/llAchievementsInformation"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/roundedrectangledata"
         >
 
         <LinearLayout
@@ -23,7 +22,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/achievment1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             >
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+
+                >
 
             <EditText
                 android:layout_width="match_parent"
@@ -32,6 +40,7 @@
                 android:id="@+id/etAchieveDesc1"
                 android:inputType="textCapSentences"
                 />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -40,8 +49,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/achievment2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             >
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+
+                >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,6 +67,7 @@
                 android:id="@+id/etAchieveDesc2"
                 android:inputType="textCapSentences"
                 />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -57,8 +76,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/achievment3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             >
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+
+                >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -66,6 +94,7 @@
                 android:id="@+id/etAchieveDesc3"
                 android:inputType="textCapSentences"
                 />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -74,8 +103,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/achievment4"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             >
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+
+                >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,6 +121,7 @@
                 android:id="@+id/etAchieveDesc4"
                 android:inputType="textCapSentences"
                 />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -91,8 +130,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/achievment5"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             >
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+
+                >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,6 +148,7 @@
                 android:id="@+id/etAchieveDesc5"
                 android:inputType="textCapSentences"
                 />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
@@ -108,8 +157,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/achievment6"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             >
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+
+                >
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -117,6 +175,7 @@
                 android:id="@+id/etAchieveDesc6"
                 android:inputType="textCapSentences"
                 />
+            </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 

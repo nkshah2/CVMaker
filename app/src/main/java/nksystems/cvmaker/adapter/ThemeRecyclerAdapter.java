@@ -187,7 +187,7 @@ public class ThemeRecyclerAdapter extends RecyclerView.Adapter<ThemeRecyclerAdap
 
     private void setTheme(String newTheme){
 
-        String updateTheme="update database_theme set current_theme='"+newTheme+"' where entry_id='1'";
+        String updateTheme="update database_theme set current_theme='"+newTheme+"'";
         db.execSQL(updateTheme);
 
     }

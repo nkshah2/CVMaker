@@ -33,6 +33,7 @@ public class DatabaseQueries {
 
     public Cursor getFileList(){
 
+
         Cursor myCursor = db.rawQuery("select coalesce(filename,'') || '~'|| coalesce(strftime('%d-%m-%Y',updationdate),'') as filename, " +
                 "template from personal_details",null);
         return myCursor;
