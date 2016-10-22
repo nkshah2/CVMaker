@@ -1,6 +1,7 @@
 package nksystems.cvmaker;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 /**
@@ -13,6 +14,7 @@ public class DatabaseObject extends MyDatabase {
     public DatabaseObject(Context context){
         super(context);
         db = getWritableDatabase();
+
     }
 
     public SQLiteDatabase getConnection(){
@@ -21,5 +23,9 @@ public class DatabaseObject extends MyDatabase {
 
     public void closeConnection(){
         db.close();
+    }
+
+    public void setDatabaseVersionVar(int versionVar){
+        super.setDatabaseVersionVar(versionVar);
     }
 }

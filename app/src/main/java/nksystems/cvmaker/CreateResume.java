@@ -96,7 +96,6 @@ public class CreateResume extends AppCompatActivity {
 
     Menu menuOptions;
     int backCount=0,totalSections=9;
-    InterstitialAd imageAd;
     RelativeLayout root;
     ImageButton addCertification,removeCertification,addExperience,removeExperience,addAchievement,removeAchievement,addSkill,removeSkill,addEC,removeEC;
     EditText txtObjective, txtName, txtFilename, txtTemplate;
@@ -1565,18 +1564,7 @@ public class CreateResume extends AppCompatActivity {
             @Override
             public void onClick(View view){
 
-                /*imageAd= new InterstitialAd(CreateResume.this);
-                imageAd.setAdUnitId("ca-app-pub-2342189677319514/5921134584");
-                imageAd.setAdListener(new AdListener() {
-                    @Override
-                    public void onAdLoaded() {
-                        super.onAdLoaded();
-                        //showAd();
-                    }
 
-                    @Override
-                    public void onAdClosed() {
-                        super.onAdClosed();*/
                         etFileName=(EditText) findViewById(R.id.etFileName);
                         spinnerTemplate=(Spinner) findViewById(R.id.spinnerTemplate);
                         etObjective=(EditText) findViewById(R.id.etObjective);
@@ -1740,10 +1728,7 @@ public class CreateResume extends AppCompatActivity {
                         }else{
                             Toast.makeText(CreateResume.this,"Filename/Personal details are mandatory",Toast.LENGTH_LONG).show();
                         }
-                   /* }
-                });*/
 
-                //requestNewInterstitial();
             }
         });
     }
@@ -4108,20 +4093,7 @@ public class CreateResume extends AppCompatActivity {
         date.setText(sdf.format(myCalendar.getTime()));
     }*/
 
-    private void requestNewInterstitial() {
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
 
-        imageAd.loadAd(adRequest);
-    }
-
-    private  void showAd(){
-        if(imageAd.isLoaded()){
-            imageAd.show();
-        }else{
-
-        }
-    }
 
 
 }

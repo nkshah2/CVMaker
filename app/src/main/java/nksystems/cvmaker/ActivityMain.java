@@ -40,6 +40,25 @@ public class ActivityMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         dbObject=new DatabaseObject(this);
         theme=dbObject.getConnection();
+
+        Cursor tables=theme.rawQuery("select * from sqlite_master where type='table'",null);
+        tables.moveToFirst();
+        boolean isNew=false;
+        for(int i=0;i<tables.getCount();i++){
+            if(tables.getString(tables.getColumnIndex("tbl_name")).equalsIgnoreCase("database_theme")){
+                isNew=true;
+            }
+            tables.moveToNext();
+        }
+
+        if(!isNew){
+            theme.execSQL("create table database_theme(current_theme varchar primary key not null)");
+            theme.execSQL("insert into database_theme(current_theme) values('green')");
+            theme.execSQL("create table adcheck(isEnabled varchar primary key not null)");
+            theme.execSQL("insert into adcheck(isEnabled) values('true')");
+            isNew=true;
+        }
+
         Cursor cursor=theme.rawQuery("select * from database_theme",null);
         cursor.moveToFirst();
         String currentTheme= cursor.getString(cursor.getColumnIndex("current_theme"));
