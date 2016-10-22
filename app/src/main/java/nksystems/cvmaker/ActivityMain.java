@@ -2,13 +2,9 @@ package nksystems.cvmaker;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.preference.PreferenceManager;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -231,7 +227,7 @@ public class ActivityMain extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (backCount == 0) {
+       /* if (backCount == 0) {
             backCount++;
             Toast.makeText(this, "Press back key again to close application", Toast.LENGTH_SHORT).show();
         } else {
@@ -240,7 +236,8 @@ public class ActivityMain extends AppCompatActivity {
             intent.addCategory(Intent.CATEGORY_HOME);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-        }
+        }*/
+        finish();
     }
 
 
@@ -262,7 +259,7 @@ public class ActivityMain extends AppCompatActivity {
         // Take appropriate action for each action item click
         switch (item.getItemId()) {
             case R.id.theme:
-                startActivity(new Intent(ActivityMain.this,activity_settings.class));
+                startActivity(new Intent(ActivityMain.this,ThemeActivity.class));
                 break;
             case R.id.rateus:
                 Log.i("ActivityMain","Rate Us");

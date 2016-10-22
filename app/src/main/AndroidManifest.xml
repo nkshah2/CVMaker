@@ -23,7 +23,8 @@
         </activity>
         <activity
             android:name=".ActivityMain"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
         <activity
             android:name=".HomeTab"
             android:screenOrientation="portrait" />
@@ -48,7 +49,7 @@
         <activity
             android:name=".activity_feedback"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity_settings"></activity>
+        <activity android:name=".ThemeActivity"></activity>
     </application>
 
 </manifest>
