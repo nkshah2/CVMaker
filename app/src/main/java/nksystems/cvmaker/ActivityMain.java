@@ -264,12 +264,6 @@ public class ActivityMain extends AppCompatActivity {
             case R.id.rateus:
                 Log.i("ActivityMain","Rate Us");
                 break;
-            case R.id.removeads:
-                Log.i("ActivityMain","Remove Ads");
-                break;
-            case R.id.help:
-                Log.i("ActivityMain","Help");
-                break;
         }
         return super.onOptionsItemSelected(item);
     }

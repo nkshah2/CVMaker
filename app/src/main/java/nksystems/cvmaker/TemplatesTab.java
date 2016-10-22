@@ -52,9 +52,9 @@ public class TemplatesTab extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_templates_tab, container, false);
 
         MobileAds.initialize(TemplatesTab.this.getContext(),"ca-app-pub-2342189677319514/2967668185");
-//        mAdview=(AdView)rootView.findViewById(R.id.homeAdview);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdview.loadAd(adRequest);
+        mAdview=(AdView)rootView.findViewById(R.id.homeAdview);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdview.loadAd(adRequest);
 
         return rootView;
     }

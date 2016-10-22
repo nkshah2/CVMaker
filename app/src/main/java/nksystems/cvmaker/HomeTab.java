@@ -88,9 +88,9 @@ public class HomeTab extends Fragment {
 
         rv=(RecyclerView)rootView.findViewById(R.id.rvFilenames);
         MobileAds.initialize(HomeTab.this.getContext(),"ca-app-pub-2342189677319514/1490934981");
-//        mAdview=(AdView)rootView.findViewById(R.id.homeAdview);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdview.loadAd(adRequest);
+        mAdview=(AdView)rootView.findViewById(R.id.homeAdview);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdview.loadAd(adRequest);
 
 
         myFab=(FloatingActionButton)rootView.findViewById(R.id.fab);

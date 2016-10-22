@@ -77,9 +77,9 @@ public class StatisticsTab extends Fragment {
         progressBar=(ProgressBar)rootView.findViewById(R.id.progressBar);
 
         MobileAds.initialize(StatisticsTab.this.getContext(),"ca-app-pub-2342189677319514/4444401382");
-//        mAdview=(AdView)rootView.findViewById(R.id.homeAdview);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdview.loadAd(adRequest);
+        mAdview=(AdView)rootView.findViewById(R.id.homeAdview);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdview.loadAd(adRequest);
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
