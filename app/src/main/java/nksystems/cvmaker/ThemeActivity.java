@@ -3,8 +3,6 @@ package nksystems.cvmaker;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,7 +16,7 @@ import java.util.List;
 import nksystems.cvmaker.adapter.ThemeRecyclerAdapter;
 
 public class
-ThemeActivity extends AppCompatActivity {
+activity_settings extends AppCompatActivity {
 
 
     DatabaseObject dbObject;
@@ -36,44 +34,30 @@ ThemeActivity extends AppCompatActivity {
         cursor.moveToFirst();
         String currentTheme= cursor.getString(cursor.getColumnIndex("current_theme"));
 
-        ActionBar actionbar=getSupportActionBar();
-        actionbar.setHomeButtonEnabled(true);
-        actionbar.setDisplayHomeAsUpEnabled(true);
-
-
-
         switch (currentTheme.toLowerCase()){
             case "red":
                 setTheme(R.style.redTheme);
-                actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.redColorPrimary)));
                 break;
             case "pink":
                 setTheme(R.style.pinkTheme);
-                actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pinkColorPrimary)));
                 break;
             case "purple":
                 setTheme(R.style.purpleTheme);
-                actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.purpleColorPrimary)));
                 break;
             case "blue":
                 setTheme(R.style.blueTheme);
-                actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blueColorPrimary)));
                 break;
             case "green":
                 setTheme(R.style.greenTheme);
-                actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.greenColorPrimary)));
                 break;
             case "yellow":
                 setTheme(R.style.yellowTheme);
-                actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.yellowColorPrimary)));
                 break;
             case "orange":
                 setTheme(R.style.orangeTheme);
-                actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orangeColorPrimary)));
                 break;
             case "grey":
                 setTheme(R.style.greyTheme);
-                actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.greyColorPrimary)));
                 break;
         }
 
