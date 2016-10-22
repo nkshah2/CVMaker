@@ -70,17 +70,8 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="11b470ef0f1e9c298c917a202540a21966e76e01">
+        sha1="37e9f85df55e6f3707c0bc31a4d13883fabeae3c">
         <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_95848e3fba617aebef1ab33842b038e95165b69e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="673d77a5bbddd766037f088e775df525c46407f0">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_dfa4bbe44495317daa775032a2d5b968544b9f4a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -90,6 +81,15 @@
         revision="23.0.2"
         sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
         <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.0.2_b23c307c45ce399a01f0a4909c9c5cc2807fe96f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_dfa4bbe44495317daa775032a2d5b968544b9f4a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -142,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="297541cb2bf7d6e7a6a44334697c0613f53a5325">
+        sha1="a9f900c7f76b2131b5b7b43e5f93e512b8442d16">
         <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e48ead474abdfe51c082f9026b5cdce86185c013/classes.dex" />
     </item>
     <item

@@ -3,11 +3,8 @@ package nksystems.cvmaker.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
-import android.preference.PreferenceManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,16 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.itextpdf.xmp.impl.Utils;
-
 import java.util.List;
 
-import nksystems.cvmaker.ActivityMain;
 import nksystems.cvmaker.DatabaseObject;
-import nksystems.cvmaker.DatabaseQueries;
-import nksystems.cvmaker.HomeTab;
 import nksystems.cvmaker.R;
-import nksystems.cvmaker.activity_settings;
+import nksystems.cvmaker.ThemeActivity;
 
 /**
  * Created by apple on 11/10/16.
@@ -142,43 +134,43 @@ public class ThemeRecyclerAdapter extends RecyclerView.Adapter<ThemeRecyclerAdap
                 case "red":
                     setTheme("red");
                     ((Activity)context).finish();
-                    context.startActivity(new Intent(context,activity_settings.class));
+                    context.startActivity(new Intent(context,ThemeActivity.class));
 
                     break;
                 case "pink":
                     setTheme("pink");
                     ((Activity)context).finish();
-                    context.startActivity(new Intent(context,activity_settings.class));
+                    context.startActivity(new Intent(context,ThemeActivity.class));
                     break;
                 case "purple":
                     setTheme("purple");
                     ((Activity)context).finish();
-                    context.startActivity(new Intent(context,activity_settings.class));
+                    context.startActivity(new Intent(context,ThemeActivity.class));
                     break;
                 case "blue":
                     setTheme("blue");
                     ((Activity)context).finish();
-                    context.startActivity(new Intent(context,activity_settings.class));
+                    context.startActivity(new Intent(context,ThemeActivity.class));
                     break;
                 case "green":
                     setTheme("green");
                     ((Activity)context).finish();
-                    context.startActivity(new Intent(context,activity_settings.class));
+                    context.startActivity(new Intent(context,ThemeActivity.class));
                     break;
                 case "yellow":
                     setTheme("yellow");
                     ((Activity)context).finish();
-                    context.startActivity(new Intent(context,activity_settings.class));
+                    context.startActivity(new Intent(context,ThemeActivity.class));
                     break;
                 case "orange":
                     setTheme("orange");
                     ((Activity)context).finish();
-                    context.startActivity(new Intent(context,activity_settings.class));
+                    context.startActivity(new Intent(context,ThemeActivity.class));
                     break;
                 case "grey":
                     setTheme("grey");
                     ((Activity)context).finish();
-                    context.startActivity(new Intent(context,activity_settings.class));
+                    context.startActivity(new Intent(context,ThemeActivity.class));
 
                     break;
             }

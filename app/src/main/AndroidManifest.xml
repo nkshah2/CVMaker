@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:allowBackup="true"
@@ -23,7 +24,9 @@
         </activity>
         <activity
             android:name=".ActivityMain"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            />
         <activity
             android:name=".HomeTab"
             android:screenOrientation="portrait" />
@@ -48,7 +51,7 @@
         <activity
             android:name=".activity_feedback"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity_settings"></activity>
+        <activity android:name=".ThemeActivity"></activity>
     </application>
 
 </manifest>

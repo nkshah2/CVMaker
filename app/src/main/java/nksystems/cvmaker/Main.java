@@ -44,8 +44,6 @@ public class Main extends AppCompatActivity {
         if(!isNew){
             theme.execSQL("create table database_theme(current_theme varchar primary key not null)");
             theme.execSQL("insert into database_theme(current_theme) values('green')");
-            theme.execSQL("create table adcheck(isEnabled varchar primary key not null)");
-            theme.execSQL("insert into adcheck(isEnabled) values('true')");
             isNew=true;
         }
 

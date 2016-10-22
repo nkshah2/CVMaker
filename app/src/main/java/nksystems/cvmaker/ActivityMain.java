@@ -1,14 +1,11 @@
 package nksystems.cvmaker;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.preference.PreferenceManager;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+
 import java.io.File;
 
 import nksystems.cvmaker.adapter.TabPagerAdapter;
@@ -25,6 +23,7 @@ import nksystems.cvmaker.adapter.TabPagerAdapter;
 public class ActivityMain extends AppCompatActivity {
 
     private int backCount = 0;
+
     private Context context;
     //TabHost myTabHost;
     ViewPager viewPager;
@@ -35,11 +34,20 @@ public class ActivityMain extends AppCompatActivity {
     SQLiteDatabase theme;
 
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dbObject=new DatabaseObject(this);
         theme=dbObject.getConnection();
+
+        //for app purchases
+
+
+        //app purchase stuff ends here
 
         Cursor tables=theme.rawQuery("select * from sqlite_master where type='table'",null);
         tables.moveToFirst();
@@ -54,8 +62,6 @@ public class ActivityMain extends AppCompatActivity {
         if(!isNew){
             theme.execSQL("create table database_theme(current_theme varchar primary key not null)");
             theme.execSQL("insert into database_theme(current_theme) values('green')");
-            theme.execSQL("create table adcheck(isEnabled varchar primary key not null)");
-            theme.execSQL("insert into adcheck(isEnabled) values('true')");
             isNew=true;
         }
 
@@ -235,10 +241,11 @@ public class ActivityMain extends AppCompatActivity {
             backCount++;
             Toast.makeText(this, "Press back key again to close application", Toast.LENGTH_SHORT).show();
         } else {
-            finish();
+
             Intent intent = new Intent(Intent.ACTION_MAIN);
             intent.addCategory(Intent.CATEGORY_HOME);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            finish();
             startActivity(intent);
         }
     }
@@ -262,13 +269,16 @@ public class ActivityMain extends AppCompatActivity {
         // Take appropriate action for each action item click
         switch (item.getItemId()) {
             case R.id.theme:
-                startActivity(new Intent(ActivityMain.this,activity_settings.class));
+                finish();
+                startActivity(new Intent(ActivityMain.this,ThemeActivity.class));
                 break;
             case R.id.rateus:
-                Log.i("ActivityMain","Rate Us");
+                launchMarket();
                 break;
             case R.id.removeads:
-                Log.i("ActivityMain","Remove Ads");
+
+
+
                 break;
             case R.id.help:
                 Log.i("ActivityMain","Help");
@@ -276,6 +286,20 @@ public class ActivityMain extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    private void launchMarket() {
+        Uri uri = Uri.parse("market://details?id=" + getPackageName());
+        Intent myAppLinkToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        try {
+            startActivity(myAppLinkToMarket);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, " unable to find market app", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+
+
 
 
 }
