@@ -143,8 +143,8 @@ public class CreateResume extends AppCompatActivity {
     SimpleDateFormat dateFormat= new SimpleDateFormat("dd/MM/yyyy");
     private ResumeAdapter resumeAdapter;
     ViewPager viewPager;
-    private String[] resumeTabs={"Personal Information","Education Details","Certification","Experience","Achievements","Skills",
-            "Extra-Curriculars","Personal Interests"};
+    private String[] resumeTabs={"Personal Information (1/8)","Education Details (2/8)","Certification (3/8)","Experience (4/8)","Achievements (5/8)","Skills (6/8)",
+            "Extra-Curriculars (7/8)","Personal Interests (8/8)"};
     ViewPager pagerRoot;
     PersonalDetails personalDetails;
     EducationDetails educationDetails;
@@ -576,7 +576,7 @@ public class CreateResume extends AppCompatActivity {
         if(isFormNeeded.equalsIgnoreCase("yes")) {
 
             theme.execSQL("update tutorial set form='no'");
-            
+
 
         }
     }
