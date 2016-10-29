@@ -1,19 +1,25 @@
 package nksystems.cvmaker;
 
+import android.*;
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class Main extends AppCompatActivity {
 
@@ -27,6 +33,10 @@ public class Main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},0);
+        }
 
         dbObject=new DatabaseObject(this);
         theme=dbObject.getConnection();
@@ -44,8 +54,13 @@ public class Main extends AppCompatActivity {
         if(!isNew){
             theme.execSQL("create table database_theme(current_theme varchar primary key not null)");
             theme.execSQL("insert into database_theme(current_theme) values('green')");
+            theme.execSQL("create table tutorial(menubutton varchar primary key not null," +
+                    "createresume varchar not null, filelist varchar not null, saveresume varchar not null, form varchar not null)");
+            theme.execSQL("insert into tutorial(menubutton,createresume,filelist,form,saveresume) values('yes','yes','yes','yes','yes')");
             isNew=true;
         }
+
+
 
         Cursor cursor=theme.rawQuery("select * from database_theme",null);
         cursor.moveToFirst();
@@ -79,6 +94,12 @@ public class Main extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_main);
+
+
+
+
+
+
 
         rootMain=(RelativeLayout)findViewById(R.id.rootMain);
         rootMain.setBackgroundColor(getResources().getColor(R.color.greyColorPrimary));
@@ -130,7 +151,7 @@ public class Main extends AppCompatActivity {
                 startActivity(new Intent(Main.this,ActivityMain.class));
                 // Actions to do after 10 seconds
             }
-        }, 2000);
+        }, 5000);
 
 
     }

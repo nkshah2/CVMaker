@@ -8,79 +8,7 @@
         optimize="true"
         revision="23.0.2"
         sha1="d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/sqliteassethelper-2.0.1_8587475ea612f4e603b612964f24eace898e0882/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="19a3f2af6ec47361a4844f60c4d3545c3d380a5d">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_95848e3fba617aebef1ab33842b038e95165b69e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="673d77a5bbddd766037f088e775df525c46407f0">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_dfa4bbe44495317daa775032a2d5b968544b9f4a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.0.2_32a7d9662941ca6054945aaa020dda778c71684a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_316de32727d84b30c9d1fc2f26da195f5095b12e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.0.2_c00b1732f9e9740a8b2ae2252ef87e925b5b75ff/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.2.1_8c8565de442b943899c46b3da4be3102bbe8798b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_1256e6abb7155837b4ba61890252f73139362b80/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="f4fb6981392ca7680d02fd57d26d6124c141d9d9">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.0.2_b3bd13f5c5197649bd261adff2326dd0fcbe8a60/classes.dex" />
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/sqliteassethelper-2.0.1_8587475ea612f4e603b612964f24eace898e0882/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -89,7 +17,7 @@
         optimize="true"
         revision="23.0.2"
         sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.4.1_0913da27154a3ff44d857db66193f426836a80f7/classes.dex" />
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.4.1_0913da27154a3ff44d857db66193f426836a80f7/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -98,70 +26,133 @@
         optimize="true"
         revision="23.0.2"
         sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.9.0_77ca30af9bb91a556b5b19ec2b7f8c9c72d3902b/classes.dex" />
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.9.0_77ca30af9bb91a556b5b19ec2b7f8c9c72d3902b/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.0.2/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.0.2/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="b8e0372ca6dc89ac4fe22b76eeea4f68ece435b8">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.0.2_76c826beb566f761c65df836654abe62c9b9cc67/classes.dex" />
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.0.2_5a9bbaff5bafcb292cc85dcb95d927c4b8baeade/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.0.2_c0b3ec7b29741c8a67eb27477fb449dfc00eae90/classes.dex" />
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.0.2_d7620ecfa2c92ce1e5d0f8d74c1a0fbaa2327d1a/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.ToxicBakery.viewpager.transforms/view-pager-transforms/1.2.32/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="392c97a8270ccf3cc7fe6e0a5d97a5e97a61e65c">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.ToxicBakery.viewpager.transforms-view-pager-transforms-1.2.32_bc751935dfa0eca0d260b0c37986f237dc14a8b2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.0.2_d01a8991d8a5c3640f0931e59ad32cba785d2484/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.0.2_b23c307c45ce399a01f0a4909c9c5cc2807fe96f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.github.chenupt.android/springindicator/1.0.2/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.github.chenupt.android/springindicator/1.0.2/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="b7c43c8ddfc4ae2091a33f2882927bb4e3e2fee2">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.chenupt.android-springindicator-1.0.2_72b015b6d9ef221d37d351cdccc99e4d16d87323/classes.dex" />
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.chenupt.android-springindicator-1.0.2_740aa8f6402350f0487eeb745342c2fb92acdef4/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/fr.avianey.com.viewpagerindicator/library/2.4.1.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.0.2_9f733a3e662f51dcff8877477106ae95795400af/classes.dex" />
+        sha1="bae64da9140d1e78edb6f28a1b4c8831aac4ab88">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/fr.avianey.com.viewpagerindicator-library-2.4.1.1_e7789230410782bff0f4531b1b70bd8535945d83/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.2.1_f39c4b33ef4c4e4d9d742bcb9a73ed2bd9377796/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f4fb6981392ca7680d02fd57d26d6124c141d9d9">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.0.2_cbab9416d93f91d0783a1d31144d5c389c0a7376/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_c423ba8039f89be6b7a26f9b0554c1fd7286718b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.0.2_f66061d02f0d49e79d5206a007010913266bf601/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.0.2_59fa0f58fd9edeb7b7ef8e0c60d25d94bd027f7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_ca7e88a3aeeeed24e47d67f199b58b4a089bc602/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.2.1_3d1ef24303b1cd913f67853f795303effb56b736/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/net.steamcrafted/materialiconlib/1.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ff0e1018e7f7d0e7178a7c3eff816574ee7f6718">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.steamcrafted-materialiconlib-1.1.1_0b6419d16d580bbd6b49dfe130e3fd39dd441ec6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.0.2_2a4bbddde1cbe7aa1ebd9f53aab97ec12afc4628/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_171c4d6c4f6b6133b748a983e00996ce5e350dfe/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -170,52 +161,52 @@
         optimize="true"
         revision="23.0.2"
         sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_86c2067e911c1cefadab32158c09110437b5d7ec/classes.dex" />
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_86c2067e911c1cefadab32158c09110437b5d7ec/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/fr.avianey.com.viewpagerindicator/library/2.4.1.1/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.ToxicBakery.viewpager.transforms/view-pager-transforms/1.2.32/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="bae64da9140d1e78edb6f28a1b4c8831aac4ab88">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/fr.avianey.com.viewpagerindicator-library-2.4.1.1_01510a71e0f0cab09f02fad498010b9d8ee5a7b0/classes.dex" />
+        sha1="392c97a8270ccf3cc7fe6e0a5d97a5e97a61e65c">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.ToxicBakery.viewpager.transforms-view-pager-transforms-1.2.32_c0b89f3398b3402cb0c4973a417e36ea03e1ec23/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_5ab1538ea0d55db50eab5538cc0955711c55bf12/classes.dex" />
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.0.2_c7427e8230685b0f72cc8db7f82430f936bf8b2d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="24169b613fefad94118fae12dad802c478e60e40">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e48ead474abdfe51c082f9026b5cdce86185c013/classes.dex" />
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_9cee5a75ef2fb0e75e6aae39c74453130e1ff372/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.2.1_400b00a7509e3ce23f726adacb7f7ab5069e1980/classes.dex" />
+        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.0.2_74b2aa4dd13eba54147792907fa770a865e8521c/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.0.2_71d54cd84c15ed81b0226f81ddfe7e9046021c61/classes.dex" />
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_7ec56750dd295fa7b8a051874cbfe24687a1b5c9/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -224,25 +215,43 @@
         optimize="true"
         revision="23.0.2"
         sha1="3580383b2c7db8fa2fee1ffbe1993017a9ea296e">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/itextg-5.5.9_a8376fdb2d22b60ffb3cd9d0a72351dd1fdcbf72/classes.dex" />
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/itextg-5.5.9_a8376fdb2d22b60ffb3cd9d0a72351dd1fdcbf72/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.github.amlcurran.showcaseview/library/5.4.3/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_da0e19634f75ab7bd265dbedfc5d96f7c01108ee/classes.dex" />
+        sha1="a06b0579dbe59192ef460e3de04657720925d05b">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.amlcurran.showcaseview-library-5.4.3_aa18c4ee678db0bfc2ea24b0c4affc93a10215fa/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/exploded-aar/net.steamcrafted/materialiconlib/1.1.1/jars/classes.jar"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="ff0e1018e7f7d0e7178a7c3eff816574ee7f6718">
-        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerGoogle/app/build/intermediates/transforms/dex/debug/folders/1000/10/net.steamcrafted-materialiconlib-1.1.1_438f0f029b940056e6e37c59bf10dfc5ccf145cf/classes.dex" />
+        sha1="ea5adbec68e270c16273a2c90fbfee19c27ee9eb">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a5ebdcd2cb2ab98e56e50c9ce8047af04f2037fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.0.2_c959dc091b1027d21e889afae84156f94df45af6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3cb9812dc8c2166836aa716f03e91944a4572579">
+        <dex dex="/Users/apple/Desktop/CVMaker/CVMakerCloudOG/default/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ca63378eb5121669081f34709c735efa21606f0e/classes.dex" />
     </item>
 
 </items>

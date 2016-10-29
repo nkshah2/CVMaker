@@ -34,7 +34,7 @@ public class DatabaseQueries {
     public Cursor getFileList(){
 
 
-        Cursor myCursor = db.rawQuery("select coalesce(filename,'') || '~'|| coalesce(strftime('%d-%m-%Y',updationdate),'') as filename, " +
+        Cursor myCursor = db.rawQuery("select coalesce(filename,'') || '~'|| coalesce(strftime('%d-%m-%Y',updationdate),'') || '~' || coalesce(template,'') as filename, " +
                 "template from personal_details",null);
         long count = db.compileStatement("select count(*) from database_theme").simpleQueryForLong();
         String currenttheme = db.compileStatement("select current_theme from database_theme").simpleQueryForString();

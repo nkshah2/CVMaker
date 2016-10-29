@@ -17,6 +17,22 @@
 
         />
 
+    <item
+        android:id="@+id/help"
+        android:title="Help"
+        android:icon="@drawable/ic_settings_white_18dp"
+        android:orderInCategory="0"
+
+        />
+
+    <item
+        android:id="@+id/enable"
+        android:title="Enable Tutorial"
+        android:icon="@drawable/ic_settings_white_18dp"
+        android:orderInCategory="0"
+
+        />
+
 
 
 

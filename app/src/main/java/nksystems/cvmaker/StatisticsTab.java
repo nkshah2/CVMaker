@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.view.ContextThemeWrapper;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -166,6 +167,8 @@ public class StatisticsTab extends Fragment {
                 myDrawable.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
                 break;
         }
+
+        Log.i("check","stats rootview returned");
 
         return rootView;
     }

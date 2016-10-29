@@ -9,14 +9,17 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -25,17 +28,29 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.Layout;
+import android.text.TextPaint;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.amlcurran.showcaseview.MaterialShowcaseDrawer;
+import com.github.amlcurran.showcaseview.OnShowcaseEventListener;
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ActionItemTarget;
+import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
+import com.github.amlcurran.showcaseview.targets.PointTarget;
+import com.github.amlcurran.showcaseview.targets.Target;
+import com.github.amlcurran.showcaseview.targets.ViewTarget;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -47,14 +62,17 @@ import java.util.List;
 
 import nksystems.cvmaker.adapter.RecyclerViewAdapter;
 
+import static nksystems.cvmaker.R.id.file;
 import static nksystems.cvmaker.R.id.rootView;
 
 public class HomeTab extends Fragment {
     FloatingActionButton myFab;
     RecyclerView rv;
-
+String currentTheme;
     AdView mAdview;
     TextView instruction;
+    RelativeLayout root;
+    boolean isUndo=false;
     ListView listView;
     private List<String> fileList;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
@@ -62,6 +80,7 @@ public class HomeTab extends Fragment {
     DatabaseQueries dbQueries;
     DatabaseObject dbObject;
     SQLiteDatabase theme;
+
     View rootView;
 
     @Override
@@ -73,7 +92,10 @@ public class HomeTab extends Fragment {
         theme=dbObject.getConnection();
         Cursor cursor=theme.rawQuery("select * from database_theme",null);
         cursor.moveToFirst();
-        String currentTheme= cursor.getString(cursor.getColumnIndex("current_theme"));
+
+
+
+        currentTheme= cursor.getString(cursor.getColumnIndex("current_theme"));
 
 
 
@@ -150,13 +172,13 @@ public class HomeTab extends Fragment {
         });
 
 
-
+        Log.i("check","hometab rootview returned");
 
         return rootView;
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         fileList = fetchPdfFiles();
         if(!fileList.isEmpty()){
@@ -165,8 +187,79 @@ public class HomeTab extends Fragment {
 
             listView = (ListView) view.findViewById(R.id.filenames);
             instruction=(TextView)view.findViewById(R.id.tvInstruction);
+            root=(RelativeLayout)view.findViewById(R.id.rootviewHomeTab);
             instruction.setVisibility(View.GONE);
+            rv.setVisibility(View.VISIBLE);
 
+            RecyclerView.LayoutManager myManager= new LinearLayoutManager(this.getContext());
+
+            final RecyclerViewAdapter adapter= new RecyclerViewAdapter(fileList,HomeTab.this.getContext());
+
+            ItemTouchHelper.SimpleCallback simpleCallback= new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
+                @Override
+                public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                    return false;
+                }
+
+                @Override
+                public void onSwiped(final RecyclerView.ViewHolder viewHolder, int direction) {
+
+                    final int position= viewHolder.getAdapterPosition();
+
+                    String info=fileList.get(position);
+                    dbQueries= new DatabaseQueries(getContext().getApplicationContext());
+                    String[] infos= info.split("~");
+                    final String filename=infos[0];
+
+
+                    final Snackbar mySnackBar= Snackbar.make(root,"Item will be deleted",Snackbar.LENGTH_LONG);
+                    mySnackBar.setAction("CONFIRM", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dbQueries.deleteFileFromDb(filename);
+
+
+                            fileList.remove(position);
+                            adapter.notifyDataSetChanged();
+
+                            mySnackBar.dismiss();
+
+
+
+                        }
+                    });
+
+                    mySnackBar.setCallback(new Snackbar.Callback() {
+                        @Override
+                        public void onDismissed(Snackbar snackbar, int event) {
+                            super.onDismissed(snackbar, event);
+                            getActivity().finish();
+                            startActivity(new Intent(getContext(),ActivityMain.class));
+                        }
+                    });
+
+
+                    mySnackBar.setActionTextColor(getResources().getColor(R.color.redColorPrimary));
+                    mySnackBar.show();
+
+
+
+
+
+
+
+                }
+
+//
+            };
+
+
+            ItemTouchHelper ith= new ItemTouchHelper(simpleCallback);
+            ith.attachToRecyclerView(rv);
+
+
+            rv.setLayoutManager(myManager);
+            rv.setAdapter(adapter);
 
 
 
@@ -175,8 +268,244 @@ public class HomeTab extends Fragment {
         }else{
             instruction=(TextView)view.findViewById(R.id.tvInstruction);
             instruction.setVisibility(View.VISIBLE);
+            rv.setVisibility(View.GONE);
         }
 
+
+
+
+        Cursor test=theme.rawQuery("select * from tutorial",null);
+        test.moveToFirst();
+        String isMenuNeeded=test.getString(test.getColumnIndex("menubutton"));
+        final String isCreateNeeded=test.getString(test.getColumnIndex("createresume"));
+        final String isFileListNeeded=test.getString(test.getColumnIndex("filelist"));
+
+        TextPaint myPaint=new TextPaint();
+        myPaint.bgColor=getResources().getColor(R.color.pureWhite);
+
+        final Button myButton=new Button(getContext());
+        myButton.setBackgroundColor(Color.TRANSPARENT);
+        myButton.setClickable(false);
+        myButton.setText("");
+        myButton.setEnabled(false);
+        myButton.setVisibility(View.GONE);
+
+        Display display= getActivity().getWindowManager().getDefaultDisplay();
+        final Point point= new Point();
+        display.getSize(point);
+
+
+
+        if(isMenuNeeded.equalsIgnoreCase("yes")){
+            ShowcaseView myShowcase= new ShowcaseView.Builder(getActivity())
+                    .setTarget(new PointTarget(point.x,point.y/20))
+                    .useDecorViewAsParent()
+                    .setContentTitle("New Menu Options")
+                    .setContentText("Check out the new menu options")
+                    .hideOnTouchOutside()
+                    .setStyle(R.style.ShowCaseViewGrey)
+                    .setContentTitlePaint(myPaint)
+                    .setContentTextPaint(myPaint)
+                    .replaceEndButton(myButton)
+                    .setShowcaseEventListener(new OnShowcaseEventListener() {
+                        @Override
+                        public void onShowcaseViewHide(ShowcaseView showcaseView) {
+
+                            theme.execSQL("update tutorial set menubutton='no'");
+
+                            if(!isCreateNeeded.equalsIgnoreCase("yes")){
+
+                            }else{
+
+
+
+                                final Button myButton=new Button(getContext());
+                                myButton.setBackgroundColor(Color.TRANSPARENT);
+                                myButton.setClickable(false);
+                                myButton.setText("");
+                                myButton.setEnabled(false);
+                                myButton.setVisibility(View.GONE);
+
+                                ShowcaseView myCreateShowcase= new ShowcaseView.Builder(getActivity())
+                                        .setTarget(new ViewTarget(view.findViewById(R.id.fab)))
+                                        .setContentTitle("Get Started")
+                                        .setContentText("Click here to create a new CV")
+                                        .hideOnTouchOutside()
+                                        .setStyle(R.style.ShowCaseViewGrey)
+                                        .replaceEndButton(myButton)
+                                        .setShowcaseEventListener(new OnShowcaseEventListener() {
+                                            @Override
+                                            public void onShowcaseViewHide(ShowcaseView showcaseView) {
+
+                                                theme.execSQL("update tutorial set createresume='no'");
+
+                                                if(!fileList.isEmpty()&&isFileListNeeded.equalsIgnoreCase("yes")){
+                                                    View firstItem=rv.getLayoutManager().findViewByPosition(0);
+
+                                                    final Button myButton=new Button(getContext());
+                                                    myButton.setBackgroundColor(Color.TRANSPARENT);
+                                                    myButton.setClickable(false);
+                                                    myButton.setText("");
+                                                    myButton.setEnabled(false);
+                                                    myButton.setVisibility(View.GONE);
+
+                                                    ShowcaseView myListShowcase= new ShowcaseView.Builder(getActivity())
+                                                            .setTarget(new PointTarget(point.x / 4, point.y / 4))
+                                                            .useDecorViewAsParent()
+                                                            .setContentTitle("New ways to interact")
+                                                            .setContentText("Click on it to open the PDF\nClick and hold to edit\nSwipe right to delete")
+                                                            .hideOnTouchOutside()
+                                                            .withMaterialShowcase()
+                                                            .setStyle(R.style.ShowCaseViewGrey)
+                                                            .replaceEndButton(myButton)
+                                                            .setShowcaseEventListener(new OnShowcaseEventListener() {
+                                                                @Override
+                                                                public void onShowcaseViewHide(ShowcaseView showcaseView) {
+
+                                                                    theme.execSQL("update tutorial set filelist='no'");
+                                                                }
+
+                                                                @Override
+                                                                public void onShowcaseViewDidHide(ShowcaseView showcaseView) {
+
+                                                                }
+
+                                                                @Override
+                                                                public void onShowcaseViewShow(ShowcaseView showcaseView) {
+
+                                                                }
+
+                                                                @Override
+                                                                public void onShowcaseViewTouchBlocked(MotionEvent motionEvent) {
+
+                                                                }
+                                                            }).build();
+
+
+                                                }
+
+                                            }
+
+                                            @Override
+                                            public void onShowcaseViewDidHide(ShowcaseView showcaseView) {
+
+                                            }
+
+                                            @Override
+                                            public void onShowcaseViewShow(ShowcaseView showcaseView) {
+
+                                            }
+
+                                            @Override
+                                            public void onShowcaseViewTouchBlocked(MotionEvent motionEvent) {
+
+                                            }
+                                        }).build();
+
+
+                            }
+
+                        }
+
+                        @Override
+                        public void onShowcaseViewDidHide(ShowcaseView showcaseView) {
+
+                        }
+
+                        @Override
+                        public void onShowcaseViewShow(ShowcaseView showcaseView) {
+
+                        }
+
+                        @Override
+                        public void onShowcaseViewTouchBlocked(MotionEvent motionEvent) {
+
+                        }
+                    }).build();
+//
+
+            /*switch (currentTheme.toLowerCase()){
+                case "red":
+                    myShowcase.setStyle(R.style.ShowCaseViewRed);
+                    myShowcase.build();
+                    break;
+                case "pink":
+                    myShowcase.setStyle(R.style.ShowCaseViewPink);
+                    myShowcase.build();
+                    break;
+                case "purple":
+                    myShowcase.setStyle(R.style.ShowCaseViewPurple);
+                    myShowcase.build();
+                    break;
+                case "blue":
+                    myShowcase.setStyle(R.style.ShowCaseViewBlue);
+                    myShowcase.build();
+                    break;
+                case "green":
+                    myShowcase.setStyle(R.style.ShowCaseViewGreen);
+                    myShowcase.build();
+                    break;
+                case "yellow":
+                    myShowcase.setStyle(R.style.ShowCaseViewYellow);
+                    myShowcase.build();
+                    break;
+                case "orange":
+                    myShowcase.setStyle(R.style.ShowCaseViewOrange);
+                    myShowcase.build();
+                    break;
+                case "grey":
+                    myShowcase.setStyle(R.style.ShowCaseViewGrey);
+                    myShowcase.build();
+                    break;*/
+
+
+        }else {
+            if (!fileList.isEmpty() && isFileListNeeded.equalsIgnoreCase("yes")) {
+                View firstItem = rv.getLayoutManager().findViewByPosition(0);
+
+                final Button myButton2 = new Button(getContext());
+                myButton2.setBackgroundColor(Color.TRANSPARENT);
+                myButton2.setClickable(false);
+                myButton2.setText("");
+                myButton2.setEnabled(false);
+                myButton2.setVisibility(View.GONE);
+
+
+                ShowcaseView myListShowcase = new ShowcaseView.Builder(getActivity())
+                        .setTarget(new PointTarget(point.x / 4, point.y / 4))
+                        .useDecorViewAsParent()
+                        .setContentTitle("New ways to interact")
+                        .setContentText("Click on it to open the PDF\nClick and hold to edit\nSwipe right to delete")
+                        .hideOnTouchOutside()
+                        .setStyle(R.style.ShowCaseViewGrey)
+                        .withMaterialShowcase()
+                        .replaceEndButton(myButton2)
+                        .setShowcaseEventListener(new OnShowcaseEventListener() {
+                            @Override
+                            public void onShowcaseViewHide(ShowcaseView showcaseView) {
+
+                                theme.execSQL("update tutorial set filelist='no'");
+                            }
+
+                            @Override
+                            public void onShowcaseViewDidHide(ShowcaseView showcaseView) {
+
+                            }
+
+                            @Override
+                            public void onShowcaseViewShow(ShowcaseView showcaseView) {
+
+                            }
+
+                            @Override
+                            public void onShowcaseViewTouchBlocked(MotionEvent motionEvent) {
+
+                            }
+                        }).build();
+
+
+            }
+        }
 
 
     }
@@ -184,31 +513,10 @@ public class HomeTab extends Fragment {
     private List<String> fetchPdfFiles(){
         dbQueries = new DatabaseQueries(getActivity().getApplicationContext());
         final Cursor myCursor=dbQueries.getFileList();
-        RecyclerView.LayoutManager myManager= new LinearLayoutManager(this.getContext());
-
-        final RecyclerViewAdapter adapter= new RecyclerViewAdapter(myCursor,HomeTab.this.getContext());
-
-        ItemTouchHelper.SimpleCallback simpleCallback= new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
-            @Override
-            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-                return false;
-            }
-
-            @Override
-            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-
-            }
-
-//
-        };
 
 
-        ItemTouchHelper ith= new ItemTouchHelper(simpleCallback);
-        ith.attachToRecyclerView(rv);
 
 
-        rv.setLayoutManager(myManager);
-        rv.setAdapter(adapter);
         myCursor.moveToFirst();
         String filename;
         List<String> list = new ArrayList<>();
@@ -218,13 +526,17 @@ public class HomeTab extends Fragment {
             filename = myCursor.getString(myCursor.getColumnIndex("filename"));
             //filename = filename.split("~")[0];
             //filename = filename.substring(0,filename.lastIndexOf("."));
-            list.add(filename);
+            if(!filename.equalsIgnoreCase("")) {
+                list.add(filename);
+            }
             myCursor.moveToNext();
         }
 
         myCursor.moveToFirst();
         return list;
     }
+
+
 
 
 }

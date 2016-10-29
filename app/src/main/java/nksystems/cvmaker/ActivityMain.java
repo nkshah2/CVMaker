@@ -1,5 +1,6 @@
 package nksystems.cvmaker;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -50,8 +51,6 @@ public class ActivityMain extends AppCompatActivity {
         if(!isNew){
             theme.execSQL("create table database_theme(current_theme varchar primary key not null)");
             theme.execSQL("insert into database_theme(current_theme) values('green')");
-            theme.execSQL("create table adcheck(isEnabled varchar primary key not null)");
-            theme.execSQL("insert into adcheck(isEnabled) values('true')");
             isNew=true;
         }
 
@@ -89,6 +88,10 @@ public class ActivityMain extends AppCompatActivity {
 
         setContentView(R.layout.activity_activity_main);
 
+
+
+
+
         context = ActivityMain.this;
 
         //Initialization
@@ -124,6 +127,8 @@ public class ActivityMain extends AppCompatActivity {
             @Override
             public void onTabSelected(android.support.v7.app.ActionBar.Tab tab, android.support.v4.app.FragmentTransaction ft) {
                 viewPager.setCurrentItem(tab.getPosition());
+
+                Log.i("tabCheck",""+tab.getPosition());
             }
 
             @Override
@@ -262,12 +267,29 @@ public class ActivityMain extends AppCompatActivity {
                 startActivity(new Intent(ActivityMain.this,ThemeActivity.class));
                 break;
             case R.id.rateus:
-                Log.i("ActivityMain","Rate Us");
+                launchMarket();
+                break;
+            case R.id.help:
+                startActivity(new Intent(ActivityMain.this,activity_help.class));
+                break;
+            case R.id.enable:
+                theme.execSQL("update tutorial set menubutton='yes',createresume='yes',filelist='yes',form='yes',saveresume='yes'");
+                startActivity(new Intent(ActivityMain.this,ActivityMain.class));
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 
+
+    private void launchMarket() {
+        Uri uri = Uri.parse("market://details?id=" + getPackageName());
+        Intent myAppLinkToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        try {
+            startActivity(myAppLinkToMarket);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, " Please install Google Play", Toast.LENGTH_LONG).show();
+        }
+    }
 
 }
 

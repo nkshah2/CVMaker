@@ -38,10 +38,10 @@ import nksystems.cvmaker.R;
  */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder> {
 
-    Cursor myCursor;
+    List<String> filelist;
     private static final int PENDING_REMOVAL_TIMEOUT = 3000;
     Context context;
-    String filename,date;
+    String filename,date, template;
     boolean undoOn;
     List<View> items;
     List<View> itemsPendingRemoval;
@@ -50,8 +50,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     HashMap<String, Runnable> pendingRunnables = new HashMap<>();
     DatabaseQueries dbQueries;
 
-    public RecyclerViewAdapter(Cursor myCursor, Context context){
-        this.myCursor=myCursor;
+    public RecyclerViewAdapter(List<String> fileList, Context context){
+        this.filelist=fileList;
         this.context=context;
 
 
@@ -67,9 +67,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-        myCursor.moveToPosition(position);
 
-        String name=myCursor.getString(myCursor.getColumnIndex("filename"));
+
+        String name=filelist.get(position);
         //name=name.replace("~","");
 
         String[] filearray = name.split("~");
@@ -79,9 +79,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             }
             else if(i == 1){
                 date = filearray[i];
+            }else if(i==2){
+                template=filearray[i];
             }
         }
-        String template=myCursor.getString(myCursor.getColumnIndex("template"));
+//        String template=myCursor.getString(myCursor.getColumnIndex("template"));
 
         holder.tvName.setText(filename);
         holder.tvTemplate.setText(template);
@@ -109,7 +111,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return myCursor.getCount();
+        return filelist.size();
     }
 
 
@@ -171,6 +173,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                Intent intent=new Intent(RecyclerViewAdapter.this.context,CreateResume.class);
                intent.putExtra("filename",filename);
                intent.putExtra("isEdit",true);
+
                RecyclerViewAdapter.this.context.startActivity(intent);
             }
             else{
