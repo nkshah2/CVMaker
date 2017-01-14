@@ -13,7 +13,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.io.File;
 
@@ -30,6 +36,9 @@ public class ActivityMain extends AppCompatActivity {
     private TabPagerAdapter mAdapter;
     DatabaseObject dbObject;
     SQLiteDatabase theme;
+    TextView adOption;
+    InterstitialAd myFullScreenAd;
+    String adId="ca-app-pub-2342189677319514/5921134584";
 
 
     @Override
@@ -88,9 +97,30 @@ public class ActivityMain extends AppCompatActivity {
 
         setContentView(R.layout.activity_activity_main);
 
+        myFullScreenAd=new InterstitialAd(this);
+        myFullScreenAd.setAdUnitId(adId);
+        loadAd();
+
+        myFullScreenAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                loadAd();
+            }
+        });
+
+        adOption=(TextView)findViewById(R.id.adOption);
+        adOption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(myFullScreenAd.isLoaded()){
+                    myFullScreenAd.show();
+                }
 
 
 
+            }
+        });
 
         context = ActivityMain.this;
 
@@ -289,6 +319,13 @@ public class ActivityMain extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
             Toast.makeText(this, " Please install Google Play", Toast.LENGTH_LONG).show();
         }
+    }
+
+    private void loadAd(){
+        AdRequest myRequest= new AdRequest.Builder().addTestDevice("1E1F5727D6E30BD97ACD948985B7A823").build();
+        myFullScreenAd.loadAd(myRequest);
+
+
     }
 
 }

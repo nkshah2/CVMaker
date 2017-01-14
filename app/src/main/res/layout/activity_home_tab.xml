@@ -38,6 +38,9 @@
         android:layout_centerHorizontal="true"
         android:visibility="gone"
         android:paddingLeft="10dp"
+        android:text="Use the + button to create a CV"
+        android:textAlignment="center"
+        android:gravity="center"
         android:id="@+id/tvInstruction"
         />
 

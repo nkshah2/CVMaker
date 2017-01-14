@@ -1,8 +1,34 @@
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="View an ad to support the developer(Click here)."
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/pureWhite"
+        android:layout_alignParentTop="true"
+        android:background="@color/blueDark"
+        android:id="@+id/adOption"
+        android:gravity="center"
+        />
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
     </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
 <!--<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
