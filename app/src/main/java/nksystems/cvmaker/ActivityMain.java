@@ -31,7 +31,7 @@ public class ActivityMain extends AppCompatActivity {
     private Context context;
     //TabHost myTabHost;
     ViewPager viewPager;
-    private String[] tabs = {"Home", "Templates", "Feedback"};
+
     private android.support.v7.app.ActionBar actionBar;
     private TabPagerAdapter mAdapter;
     DatabaseObject dbObject;
@@ -96,6 +96,7 @@ public class ActivityMain extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_activity_main);
+        String[] tabs = {ActivityMain.this.getResources().getString(R.string.tabNameHome),ActivityMain.this.getResources().getString(R.string.tabNameTemplate),ActivityMain.this.getResources().getString(R.string.tabNameFeedback)};
 
         myFullScreenAd=new InterstitialAd(this);
         myFullScreenAd.setAdUnitId(adId);

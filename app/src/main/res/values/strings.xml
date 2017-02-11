@@ -92,4 +92,41 @@
         <item>Grey</item>
 
     </string-array>
+
+
+    <!-- HOME TAB -->
+    <string name="homeTabHint">Use the \'+\' button to create a CV</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="adText">View an ad to support the developer(Click here)</string>
+
+    <!-- HOME TAB NAMES -->
+    <string name="tabNameHome">HOME</string>
+    <string name="tabNameTemplate">TEMPLATES</string>
+    <string name="tabNameFeedback">FEEDBACK</string>
+
+    <!-- TUTORIAL STRINGS -->
+    <string name="tutorialOptionsMenuTitle">New Menu Options</string>
+    <string name="tutorialOptionsMenuContent">Check out the new menu options</string>
+
+    <string name="tutorialFABTitle">"Get Started"</string>
+    <string name="tutorialFABContent">Click here to create a new CV</string>
+
+    <string name="tutorialInteractTitle">"New ways to interact"</string>
+    <string name="tutorialInteractContent">Click on it to open the PDF\nClick and hold to edit\nSwipe right to delete</string>
+
+    <!-- MENU OPTIONS -->
+    <string name="menuChangeTheme">Change Theme</string>
+    <string name="menuRateUs">Rate Us</string>
+    <string name="menuHelp">Help</string>
+    <string name="menuTut">Enable Tutorial</string>
+
+    <!-- FEEDBACK TAB -->
+    <string name="feedbackHintName">Name</string>
+    <string name="feedbackHintEmail">Email Address</string>
+    <string name="feedbackHintComment">Comment</string>
+    <string name="feedbackBtSubmitText">SUBMIT</string>
+
+
+
 </resources>

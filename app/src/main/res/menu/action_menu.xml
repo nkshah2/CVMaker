@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/theme"
-        android:title="Change Theme"
+        android:title="@string/menuChangeTheme"
         android:icon="@drawable/ic_settings_white_18dp"
         android:orderInCategory="0"
 
@@ -11,7 +11,7 @@
 
     <item
         android:id="@+id/rateus"
-        android:title="Rate Us"
+        android:title="@string/menuRateUs"
         android:icon="@drawable/ic_settings_white_18dp"
         android:orderInCategory="0"
 
@@ -19,7 +19,7 @@
 
     <item
         android:id="@+id/help"
-        android:title="Help"
+        android:title="@string/menuHelp"
         android:icon="@drawable/ic_settings_white_18dp"
         android:orderInCategory="0"
 
@@ -27,7 +27,7 @@
 
     <item
         android:id="@+id/enable"
-        android:title="Enable Tutorial"
+        android:title="@string/menuTut"
         android:icon="@drawable/ic_settings_white_18dp"
         android:orderInCategory="0"
 

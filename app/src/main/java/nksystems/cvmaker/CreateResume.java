@@ -62,6 +62,7 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
+import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.List;
 import com.itextpdf.text.ListItem;
@@ -69,6 +70,7 @@ import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.GrayColor;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
@@ -105,6 +107,7 @@ public class CreateResume extends AppCompatActivity {
 
     Menu menuOptions;
     int backCount=0,totalSections=9;
+    Font notoFont= FontFactory.getFont("assets/fonts/NotoSans-Regular.ttf",BaseFont.IDENTITY_H,BaseFont.EMBEDDED);
     RelativeLayout root;
     ImageButton addCertification,removeCertification,addExperience,removeExperience,addAchievement,removeAchievement,addSkill,removeSkill,addEC,removeEC;
     EditText txtObjective, txtName, txtFilename, txtTemplate;
@@ -509,6 +512,8 @@ public class CreateResume extends AppCompatActivity {
                         personal[7]=etPhone.getText().toString();
                         personal[8]=etAdress.getText().toString();
 
+                        Log.i("test",personal[2]);
+
                         int nullCount=0;
                         for(int i=0;i<personal.length;i++){
                             if(personal[i].equals("")){
@@ -791,9 +796,11 @@ public class CreateResume extends AppCompatActivity {
                 (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
                         myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
+            
             Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
                     myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.BOLD));
+                    notoFont);
+            //notoFont
             paraName.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraName);
         }
@@ -802,7 +809,7 @@ public class CreateResume extends AppCompatActivity {
                 myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
             Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")) + " | " +
                     myCursor.getString(myCursor.getColumnIndex("phoneext"))+" "+myCursor.getString(myCursor.getColumnIndex("phoneno")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             paraEmail.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraEmail);
         }
@@ -810,7 +817,7 @@ public class CreateResume extends AppCompatActivity {
                 myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
             Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             paraAddress.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraAddress);
         }
@@ -823,7 +830,7 @@ public class CreateResume extends AppCompatActivity {
             LineSeparator lsObjective = new LineSeparator();
             pdfDocument.add(new Chunk(lsObjective));
             Paragraph paraObjective = new Paragraph(myCursor.getString(myCursor.getColumnIndex("objective")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraObjective);
         }
         if(myCursor.getString(myCursor.getColumnIndex("highestedu")) != null &&
@@ -864,27 +871,27 @@ public class CreateResume extends AppCompatActivity {
             if(myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
                 PdfPCell eduTenthCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgdegree")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgcollege")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pginsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pggrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
@@ -893,27 +900,27 @@ public class CreateResume extends AppCompatActivity {
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
                 PdfPCell eduTenthCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("graddegree")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradcollege")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradinsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradgrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
@@ -926,27 +933,27 @@ public class CreateResume extends AppCompatActivity {
                 if(myCursor.getString(myCursor.getColumnIndex("diplomainsti")) != null &&
                         myCursor.getString(myCursor.getColumnIndex("diplomainsti")) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("diplomainsti")).length() > 0){
-                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("Diploma", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("Diploma", notoFont));
                     eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell1);
 
                     PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomainsti")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell2);
 
                     PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomaboard")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell3);
 
                     PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomayop")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell4);
 
                     PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomagrade")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell5);
                 }
@@ -954,27 +961,27 @@ public class CreateResume extends AppCompatActivity {
                 if(myCursor.getString(myCursor.getColumnIndex("twelfthinsti")) != null &&
                         myCursor.getString(myCursor.getColumnIndex("twelfthinsti")) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("twelfthinsti")).length() > 0){
-                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("12th", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("12th", notoFont));
                     eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell1);
 
                     PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthinsti")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell2);
 
                     PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthboard")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell3);
 
                     PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthyop")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell4);
 
                     PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthgrade")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell5);
                 }
@@ -986,32 +993,32 @@ public class CreateResume extends AppCompatActivity {
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Under Grad") ||
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
-                PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("10th", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("10th", notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthinsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthboard")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthgrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
             pdfDocument.add(eduTable);
-            /*Paragraph paraEducation = new Paragraph("Some Education", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+            /*Paragraph paraEducation = new Paragraph("Some Education", notoFont);
             pdfDocument.add(paraEducation);*/
         }
          if(myCursor.getString(myCursor.getColumnIndex("certtitle1")) != null &&
@@ -1026,7 +1033,7 @@ public class CreateResume extends AppCompatActivity {
              CertList.setListSymbol("\u2022");
              ListItem CertListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("certtitle1")) + ", " +
                      myCursor.getString(myCursor.getColumnIndex("certyear1")),
-                     new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                     notoFont);
              CertList.add(CertListItem1);
 
              for(int i=2;i<7;i++){
@@ -1035,7 +1042,7 @@ public class CreateResume extends AppCompatActivity {
                          myCursor.getString(myCursor.getColumnIndex("certtitle"+i)).length() > 0){
                      ListItem CertListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("certtitle"+i)) + ", " +
                              myCursor.getString(myCursor.getColumnIndex("certyear"+i)),
-                             new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                             notoFont);
                      CertList.add(CertListItem);
                  }
                  else{
@@ -1044,7 +1051,7 @@ public class CreateResume extends AppCompatActivity {
              }
              pdfDocument.add(CertList);
             /*Paragraph paraCertifications = new Paragraph("Java, C++, Spring MVC, HTML, CSS, Javascript, Oracle, MySql, PostgreSQL, Jasper Reports",
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraCertifications);*/
         }
         if(myCursor.getString(myCursor.getColumnIndex("companyname1")) != null &&
@@ -1071,13 +1078,13 @@ public class CreateResume extends AppCompatActivity {
 
             PdfPCell workCell1 = new PdfPCell();
             workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("companyname1")),new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL)));
-            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role1")),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
-            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration1")),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role1")),notoFont));
+            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration1")),notoFont));
             workCell1.setHorizontalAlignment(Element.ALIGN_LEFT);
             workTable.addCell(workCell1);
 
             PdfPCell workCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("projectdesc1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    notoFont));
             workCell2.setHorizontalAlignment(Element.ALIGN_LEFT);
             workTable.addCell(workCell2);
 
@@ -1088,13 +1095,13 @@ public class CreateResume extends AppCompatActivity {
 
                     PdfPCell workCellCom = new PdfPCell();
                     workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("companyname"+i)),new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL)));
-                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role"+i)),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
-                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration"+i)),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role"+i)),notoFont));
+                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration"+i)),notoFont));
                     workCellCom.setHorizontalAlignment(Element.ALIGN_LEFT);
                     workTable.addCell(workCellCom);
 
                     PdfPCell workCellDes = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("projectdesc"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     workCellDes.setHorizontalAlignment(Element.ALIGN_LEFT);
                     workTable.addCell(workCellDes);
                 }
@@ -1115,7 +1122,7 @@ public class CreateResume extends AppCompatActivity {
             List AchList = new List(12);
             AchList.setListSymbol("\u2022");
             ListItem AchListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("achievedesc1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             AchList.add(AchListItem1);
 
             for(int i=2;i<7;i++){
@@ -1123,7 +1130,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)).length() > 0){
                     ListItem AchListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                            notoFont);
                     AchList.add(AchListItem);
                 }
                 else{
@@ -1162,7 +1169,7 @@ public class CreateResume extends AppCompatActivity {
             skillsTable.addCell(skillAreaCell1);
 
             PdfPCell skillSetCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("skillset1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    notoFont));
             skillSetCell1.setHorizontalAlignment(Element.ALIGN_LEFT);
             skillsTable.addCell(skillSetCell1);
 
@@ -1177,7 +1184,7 @@ public class CreateResume extends AppCompatActivity {
                     skillsTable.addCell(skillAreaCell);
 
                     PdfPCell skillSetCell = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("skillset"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     skillSetCell.setHorizontalAlignment(Element.ALIGN_LEFT);
                     skillsTable.addCell(skillSetCell);
                 }
@@ -1198,7 +1205,7 @@ public class CreateResume extends AppCompatActivity {
             List ECList = new List(12);
             ECList.setListSymbol("\u2022");
             ListItem ECListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("extracurr1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             ECList.add(ECListItem1);
 
             for(int i=2;i<7;i++){
@@ -1206,7 +1213,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("extracurr"+i)) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("extracurr"+i)).length() > 0){
                     ListItem ECListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("extracurr"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                            notoFont);
                     ECList.add(ECListItem);
                 }
                 else{
@@ -1224,7 +1231,7 @@ public class CreateResume extends AppCompatActivity {
             LineSeparator lsPI = new LineSeparator();
             pdfDocument.add(new Chunk(lsPI));
             Paragraph paraInterests = new Paragraph(myCursor.getString(myCursor.getColumnIndex("interestdesc")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraInterests);
         }
         pdfDocument.close();
@@ -1240,7 +1247,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
             Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
                     myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.BOLD));
+                    notoFont);
             paraName.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraName);
         }
@@ -1249,7 +1256,7 @@ public class CreateResume extends AppCompatActivity {
                 myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
             Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")) + " | " +
                     myCursor.getString(myCursor.getColumnIndex("phoneext"))+" "+myCursor.getString(myCursor.getColumnIndex("phoneno")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             paraEmail.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraEmail);
         }
@@ -1257,7 +1264,7 @@ public class CreateResume extends AppCompatActivity {
                 myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
             Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             paraAddress.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraAddress);
         }
@@ -1277,7 +1284,7 @@ public class CreateResume extends AppCompatActivity {
             table.addCell(cell);
             pdfDocument.add(table);
             Paragraph paraObjective = new Paragraph(myCursor.getString(myCursor.getColumnIndex("objective")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraObjective);
         }
         if(myCursor.getString(myCursor.getColumnIndex("highestedu")) != null &&
@@ -1330,27 +1337,27 @@ public class CreateResume extends AppCompatActivity {
             if(myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
                 PdfPCell eduTenthCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgdegree")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgcollege")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pginsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pggrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
@@ -1359,27 +1366,27 @@ public class CreateResume extends AppCompatActivity {
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
                 PdfPCell eduTenthCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("graddegree")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradcollege")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradinsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradgrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
@@ -1392,27 +1399,27 @@ public class CreateResume extends AppCompatActivity {
                 if(myCursor.getString(myCursor.getColumnIndex("diplomainsti")) != null &&
                         myCursor.getString(myCursor.getColumnIndex("diplomainsti")) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("diplomainsti")).length() > 0){
-                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("Diploma", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("Diploma", notoFont));
                     eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell1);
 
                     PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomainsti")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell2);
 
                     PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomaboard")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell3);
 
                     PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomayop")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell4);
 
                     PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomagrade")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell5);
                 }
@@ -1420,27 +1427,27 @@ public class CreateResume extends AppCompatActivity {
                 if(myCursor.getString(myCursor.getColumnIndex("twelfthinsti")) != null &&
                         myCursor.getString(myCursor.getColumnIndex("twelfthinsti")) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("twelfthinsti")).length() > 0){
-                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("12th", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("12th", notoFont));
                     eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell1);
 
                     PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthinsti")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell2);
 
                     PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthboard")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell3);
 
                     PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthyop")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell4);
 
                     PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthgrade")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell5);
                 }
@@ -1452,32 +1459,32 @@ public class CreateResume extends AppCompatActivity {
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Under Grad") ||
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
-                PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("10th", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("10th", notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthinsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthboard")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthgrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
             pdfDocument.add(eduTable);
-            /*Paragraph paraEducation = new Paragraph("Some Education", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+            /*Paragraph paraEducation = new Paragraph("Some Education", notoFont);
             pdfDocument.add(paraEducation);*/
         }
         if(myCursor.getString(myCursor.getColumnIndex("certtitle1")) != null &&
@@ -1500,7 +1507,7 @@ public class CreateResume extends AppCompatActivity {
             CertList.setListSymbol("\u2022");
             ListItem CertListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("certtitle1")) + ", " +
                     myCursor.getString(myCursor.getColumnIndex("certyear1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             CertList.add(CertListItem1);
 
             for(int i=2;i<7;i++){
@@ -1509,7 +1516,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("certtitle"+i)).length() > 0){
                     ListItem CertListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("certtitle"+i)) + ", " +
                             myCursor.getString(myCursor.getColumnIndex("certyear"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                            notoFont);
                     CertList.add(CertListItem);
                 }
                 else{
@@ -1518,7 +1525,7 @@ public class CreateResume extends AppCompatActivity {
             }
             pdfDocument.add(CertList);
             /*Paragraph paraCertifications = new Paragraph("Java, C++, Spring MVC, HTML, CSS, Javascript, Oracle, MySql, PostgreSQL, Jasper Reports",
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraCertifications);*/
         }
         if(myCursor.getString(myCursor.getColumnIndex("companyname1")) != null &&
@@ -1554,13 +1561,13 @@ public class CreateResume extends AppCompatActivity {
 
             PdfPCell workCell1 = new PdfPCell();
             workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("companyname1")),new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL)));
-            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role1")),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
-            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration1")),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role1")),notoFont));
+            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration1")),notoFont));
             workCell1.setHorizontalAlignment(Element.ALIGN_LEFT);
             workTable.addCell(workCell1);
 
             PdfPCell workCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("projectdesc1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    notoFont));
             workCell2.setHorizontalAlignment(Element.ALIGN_LEFT);
             workTable.addCell(workCell2);
 
@@ -1571,13 +1578,13 @@ public class CreateResume extends AppCompatActivity {
 
                     PdfPCell workCellCom = new PdfPCell();
                     workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("companyname"+i)),new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL)));
-                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role"+i)),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
-                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration"+i)),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role"+i)),notoFont));
+                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration"+i)),notoFont));
                     workCellCom.setHorizontalAlignment(Element.ALIGN_LEFT);
                     workTable.addCell(workCellCom);
 
                     PdfPCell workCellDes = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("projectdesc"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     workCellDes.setHorizontalAlignment(Element.ALIGN_LEFT);
                     workTable.addCell(workCellDes);
                 }
@@ -1586,7 +1593,7 @@ public class CreateResume extends AppCompatActivity {
                 }
             }
             pdfDocument.add(workTable);
-            /*Paragraph paraWorkExp = new Paragraph("Some Work Experience", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+            /*Paragraph paraWorkExp = new Paragraph("Some Work Experience", notoFont);
             pdfDocument.add(paraWorkExp);*/
         }
         if(myCursor.getString(myCursor.getColumnIndex("achievedesc1")) != null &&
@@ -1608,7 +1615,7 @@ public class CreateResume extends AppCompatActivity {
             List AchList = new List(12);
             AchList.setListSymbol("\u2022");
             ListItem AchListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("achievedesc1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             AchList.add(AchListItem1);
 
             for(int i=2;i<7;i++){
@@ -1616,7 +1623,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)).length() > 0){
                     ListItem AchListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                            notoFont);
                     AchList.add(AchListItem);
                 }
                 else{
@@ -1625,7 +1632,7 @@ public class CreateResume extends AppCompatActivity {
             }
             pdfDocument.add(AchList);
             /*Paragraph paraAchievements = new Paragraph("Represented India in the Second International Open Junior Karate-Do Championship, held in Canada in June '02 and was awarded the Japanese Black Belt",
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraAchievements);*/
         }
         if(myCursor.getString(myCursor.getColumnIndex("skillarea1")) != null &&
@@ -1665,7 +1672,7 @@ public class CreateResume extends AppCompatActivity {
             skillsTable.addCell(skillAreaCell1);
 
             PdfPCell skillSetCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("skillset1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    notoFont));
             skillSetCell1.setHorizontalAlignment(Element.ALIGN_LEFT);
             skillsTable.addCell(skillSetCell1);
 
@@ -1680,7 +1687,7 @@ public class CreateResume extends AppCompatActivity {
                     skillsTable.addCell(skillAreaCell);
 
                     PdfPCell skillSetCell = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("skillset"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     skillSetCell.setHorizontalAlignment(Element.ALIGN_LEFT);
                     skillsTable.addCell(skillSetCell);
                 }
@@ -1690,7 +1697,7 @@ public class CreateResume extends AppCompatActivity {
             }
             pdfDocument.add(skillsTable);
             /*Paragraph paraTSkills = new Paragraph("Java, C++, Spring MVC, HTML, CSS, Javascript, Oracle, MySql, PostgreSQL, Jasper Reports",
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraTSkills);*/
         }
         if(myCursor.getString(myCursor.getColumnIndex("extracurr1")) != null &&
@@ -1712,7 +1719,7 @@ public class CreateResume extends AppCompatActivity {
             List ECList = new List(12);
             ECList.setListSymbol("\u2022");
             ListItem ECListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("extracurr1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             ECList.add(ECListItem1);
 
             for(int i=2;i<7;i++){
@@ -1720,7 +1727,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("extracurr"+i)) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("extracurr"+i)).length() > 0){
                     ListItem ECListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("extracurr"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                            notoFont);
                     ECList.add(ECListItem);
                 }
                 else{
@@ -1729,7 +1736,7 @@ public class CreateResume extends AppCompatActivity {
             }
             pdfDocument.add(ECList);
             /*Paragraph paraActivities = new Paragraph("Attended 10 Annual Karate Training Camps of All India Gojukai Karate-Do (I.K.G.A), held in Pune and was awarded the Indian Black Belt",
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraActivities);*/
         }
         if(myCursor.getString(myCursor.getColumnIndex("interestdesc")) != null &&
@@ -1748,7 +1755,7 @@ public class CreateResume extends AppCompatActivity {
             table.addCell(cell);
             pdfDocument.add(table);
             Paragraph paraInterests = new Paragraph(myCursor.getString(myCursor.getColumnIndex("interestdesc")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             pdfDocument.add(paraInterests);
         }
         pdfDocument.close();
@@ -1763,7 +1770,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
             Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
                     myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 18, Font.BOLD));
+                    notoFont);
             paraName.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraName);
         }
@@ -1771,7 +1778,7 @@ public class CreateResume extends AppCompatActivity {
                 myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
             Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             paraAddress.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraAddress);
         }
@@ -1779,7 +1786,7 @@ public class CreateResume extends AppCompatActivity {
                 myCursor.getString(myCursor.getColumnIndex("phoneno")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("phoneno")).length()>0){
             Paragraph paraContact = new Paragraph(myCursor.getString(myCursor.getColumnIndex("phoneext")) + " " +
-                    myCursor.getString(myCursor.getColumnIndex("phoneno")), new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    myCursor.getString(myCursor.getColumnIndex("phoneno")), notoFont);
             paraContact.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraContact);
         }
@@ -1787,7 +1794,7 @@ public class CreateResume extends AppCompatActivity {
                 myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
                 myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
             Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             paraEmail.setAlignment(Element.ALIGN_CENTER);
             pdfDocument.add(paraEmail);
         }
@@ -1849,27 +1856,27 @@ public class CreateResume extends AppCompatActivity {
             if(myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
                 PdfPCell eduTenthCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgdegree")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgcollege")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pginsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pgyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("pggrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
@@ -1878,27 +1885,27 @@ public class CreateResume extends AppCompatActivity {
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
                 PdfPCell eduTenthCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("graddegree")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradcollege")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradinsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("gradgrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
@@ -1911,27 +1918,27 @@ public class CreateResume extends AppCompatActivity {
                 if(myCursor.getString(myCursor.getColumnIndex("diplomainsti")) != null &&
                         myCursor.getString(myCursor.getColumnIndex("diplomainsti")) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("diplomainsti")).length() > 0){
-                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("Diploma", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("Diploma", notoFont));
                     eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell1);
 
                     PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomainsti")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell2);
 
                     PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomaboard")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell3);
 
                     PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomayop")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell4);
 
                     PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("diplomagrade")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell5);
                 }
@@ -1939,27 +1946,27 @@ public class CreateResume extends AppCompatActivity {
                 if(myCursor.getString(myCursor.getColumnIndex("twelfthinsti")) != null &&
                         myCursor.getString(myCursor.getColumnIndex("twelfthinsti")) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("twelfthinsti")).length() > 0){
-                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("12th", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("12th", notoFont));
                     eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell1);
 
                     PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthinsti")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell2);
 
                     PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthboard")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell3);
 
                     PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthyop")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell4);
 
                     PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("twelfthgrade")),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                     eduTable.addCell(eduTenthCell5);
                 }
@@ -1971,27 +1978,27 @@ public class CreateResume extends AppCompatActivity {
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Under Grad") ||
                     myCursor.getString(myCursor.getColumnIndex("highestedu")).contains("Post Grad")){
 
-                PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("10th", new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                PdfPCell eduTenthCell1 = new PdfPCell(new Phrase("10th", notoFont));
                 eduTenthCell1.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell1);
 
                 PdfPCell eduTenthCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthinsti")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell2.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell2);
 
                 PdfPCell eduTenthCell3 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthboard")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell3.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell3);
 
                 PdfPCell eduTenthCell4 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthyop")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell4.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell4);
 
                 PdfPCell eduTenthCell5 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("tenthgrade")),
-                        new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                        notoFont));
                 eduTenthCell5.setHorizontalAlignment(Element.ALIGN_CENTER);
                 eduTable.addCell(eduTenthCell5);
             }
@@ -2024,7 +2031,7 @@ public class CreateResume extends AppCompatActivity {
             CertList.setListSymbol("\u2022");
             ListItem CertListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("certtitle1")) + ", " +
                     myCursor.getString(myCursor.getColumnIndex("certyear1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             CertList.add(CertListItem1);
 
             for(int i=2;i<7;i++){
@@ -2033,7 +2040,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("certtitle"+i)).length() > 0){
                     ListItem CertListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("certtitle"+i)) + ", " +
                             myCursor.getString(myCursor.getColumnIndex("certyear"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                            notoFont);
                     CertList.add(CertListItem);
                 }
                 else{
@@ -2080,13 +2087,13 @@ public class CreateResume extends AppCompatActivity {
 
             PdfPCell workCell1 = new PdfPCell();
             workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("companyname1")),new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL)));
-            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role1")),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
-            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration1")),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role1")),notoFont));
+            workCell1.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration1")),notoFont));
             workCell1.setHorizontalAlignment(Element.ALIGN_LEFT);
             workTable.addCell(workCell1);
 
             PdfPCell workCell2 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("projectdesc1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    notoFont));
             workCell2.setHorizontalAlignment(Element.ALIGN_LEFT);
             workTable.addCell(workCell2);
 
@@ -2097,13 +2104,13 @@ public class CreateResume extends AppCompatActivity {
 
                     PdfPCell workCellCom = new PdfPCell();
                     workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("companyname1")),new Font(Font.FontFamily.TIMES_ROMAN, 14, Font.NORMAL)));
-                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role1")),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
-                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration1")),new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("role1")),notoFont));
+                    workCellCom.addElement(new Phrase(myCursor.getString(myCursor.getColumnIndex("duration1")),notoFont));
                     workCellCom.setHorizontalAlignment(Element.ALIGN_LEFT);
                     workTable.addCell(workCellCom);
 
                     PdfPCell workCellDes = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("projectdesc"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     workCellDes.setHorizontalAlignment(Element.ALIGN_LEFT);
                     workTable.addCell(workCellDes);
                 }
@@ -2139,7 +2146,7 @@ public class CreateResume extends AppCompatActivity {
             List AchList = new List(12);
             AchList.setListSymbol("\u2022");
             ListItem AchListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("achievedesc1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             AchList.add(AchListItem1);
 
             for(int i=2;i<7;i++){
@@ -2147,7 +2154,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)).length() > 0){
                     ListItem AchListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("achievedesc"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                            notoFont);
                     AchList.add(AchListItem);
                 }
                 else{
@@ -2201,7 +2208,7 @@ public class CreateResume extends AppCompatActivity {
             skillsTable.addCell(skillAreaCell1);
 
             PdfPCell skillSetCell1 = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("skillset1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                    notoFont));
             skillSetCell1.setHorizontalAlignment(Element.ALIGN_LEFT);
             skillsTable.addCell(skillSetCell1);
 
@@ -2216,7 +2223,7 @@ public class CreateResume extends AppCompatActivity {
                     skillsTable.addCell(skillAreaCell);
 
                     PdfPCell skillSetCell = new PdfPCell(new Phrase(myCursor.getString(myCursor.getColumnIndex("skillset"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL)));
+                            notoFont));
                     skillSetCell.setHorizontalAlignment(Element.ALIGN_LEFT);
                     skillsTable.addCell(skillSetCell);
                 }
@@ -2252,7 +2259,7 @@ public class CreateResume extends AppCompatActivity {
             List ECList = new List(12);
             ECList.setListSymbol("\u2022");
             ListItem ECListItem1 = new ListItem(myCursor.getString(myCursor.getColumnIndex("extracurr1")),
-                    new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                    notoFont);
             ECList.add(ECListItem1);
 
             for(int i=2;i<7;i++){
@@ -2260,7 +2267,7 @@ public class CreateResume extends AppCompatActivity {
                         myCursor.getString(myCursor.getColumnIndex("extracurr"+i)) != "" &&
                         myCursor.getString(myCursor.getColumnIndex("extracurr"+i)).length() > 0){
                     ListItem ECListItem = new ListItem(myCursor.getString(myCursor.getColumnIndex("extracurr"+i)),
-                            new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL));
+                            notoFont);
                     ECList.add(ECListItem);
                 }
                 else{

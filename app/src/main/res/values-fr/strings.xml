@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CV Maker</string>
+
+    <!-- HOME TAB -->
+    <string name="homeTabHint">Utilisez le bouton \'+\' pour créer un CV</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="adText">Afficher une annonce pour prendre en charge le développeur (Cliquez ici)</string>
+
+    <!-- HOME TAB NAMES -->
+    <string name="tabNameHome">ACCUEIL</string>
+    <string name="tabNameTemplate">MODÈLES</string>
+    <string name="tabNameFeedback">RÉACTION</string>
+
+
+    <!-- TUTORIAL STRINGS -->
+    <string name="tutorialOptionsMenuTitle">Nouvelles options de menu</string>
+    <string name="tutorialOptionsMenuContent">Découvrez les nouvelles options de menu</string>
+
+    <string name="tutorialFABTitle">Commencer</string>
+    <string name="tutorialFABContent">Cliquez ici pour créer un nouveau CV</string>
+
+    <string name="tutorialInteractTitle">Nouvelles façons d\'interagir</string>
+    <string name="tutorialInteractContent">Cliquez dessus pour ouvrir le PDF\nCliquez et maintenez pour modifier\nFaire glisser vers la droite pour supprimer</string>
+
+
+    <!-- MENU OPTIONS -->
+    <string name="menuChangeTheme">Change le thème</string>
+    <string name="menuRateUs">Évaluez nous</string>
+    <string name="menuHelp">Aidez-moi</string>
+    <string name="menuTut">Activer le didacticiel</string>
+
+    <!-- FEEDBACK TAB -->
+    <string name="feedbackHintName">Nom</string>
+    <string name="feedbackHintEmail">La adresse électronique</string>
+    <string name="feedbackHintComment">Commentaire</string>
+    <string name="feedbackBtSubmitText">SOUMETTRE</string>
+
+</resources>

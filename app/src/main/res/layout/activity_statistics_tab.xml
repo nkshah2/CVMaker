@@ -24,7 +24,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"
+                android:hint="@string/feedbackHintName"
                 android:inputType="textCapWords"
                 android:id="@+id/etName"
                 android:layout_marginTop="10dp"
@@ -34,7 +34,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email Address"
+                android:hint="@string/feedbackHintEmail"
                 android:inputType="textEmailAddress"
                 android:layout_marginBottom="10dp"
                 android:id="@+id/etEmail"
@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etComment"
-                android:hint="Comment"
+                android:hint="@string/feedbackHintComment"
                 android:inputType="textMultiLine|textCapSentences"
                 android:nestedScrollingEnabled="true"
                 android:layout_marginBottom="10dp"
@@ -54,7 +54,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="SUBMIT"
+                android:text="@string/feedbackBtSubmitText"
                 android:id="@+id/btnSave"
                 android:layout_marginTop="5dp"
                 android:layout_gravity="center"
