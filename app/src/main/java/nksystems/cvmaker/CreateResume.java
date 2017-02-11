@@ -40,6 +40,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -161,6 +162,8 @@ public class CreateResume extends AppCompatActivity {
     private android.support.v7.app.ActionBar actionBar;
     DatabaseObject dbObject;
     SQLiteDatabase theme;
+    ImageView profilePhoto;
+
     @Override
     public void onBackPressed() {
         if(backCount==0){
@@ -505,6 +508,7 @@ public class CreateResume extends AppCompatActivity {
                         etEC6=(EditText)findViewById(R.id.etEC6);
 
                         etHobby=(EditText)findViewById(R.id.etHobbies);
+                        profilePhoto=(ImageView)findViewById(R.id.imgPreview);
 
                         String[] personal= new String[9];
                         personal[0]=etFileName.getText().toString();
@@ -718,6 +722,7 @@ public class CreateResume extends AppCompatActivity {
         ec6=etEC6.getText().toString();
 
         personalInterest=etHobby.getText().toString();
+        String profilePhotoName = String.valueOf(profilePhoto.getTag());
 
         dbQueries = new DatabaseQueries(CreateResume.this);
         dbQueries.addPersonalInfo(filename,objective,firstName,lastName,template,DOB,email,ext,phone,adress,title);
@@ -732,6 +737,7 @@ public class CreateResume extends AppCompatActivity {
         dbQueries.addSkillsInfo(filename,domain1,skill1,domain2,skill2,domain3,skill3,domain4,skill4,domain5,skill5,domain6,skill6);
         dbQueries.addExtraCurricularsInfo(filename,ec1,ec2,ec3,ec4,ec5,ec6);
         dbQueries.addPersonalInterestInfo(filename,personalInterest);
+        dbQueries.addProfilePhoto(filename,profilePhotoName);
         Cursor myCursor = dbQueries.getFileContent(filename);
         myCursor.moveToFirst();
         if(myCursor.getString(myCursor.getColumnIndex("template")) != null){

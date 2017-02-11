@@ -47,7 +47,8 @@ public class DatabaseQueries {
         Cursor myCursor = db.rawQuery("select * from personal_details a left join personal_interests b on a.fileid=b.fileid " +
                 "left join extra_curriculars c on a.fileid=c.fileid left join skills_details d on a.fileid=d.fileid " +
                 "left join achievement_details e on a.fileid=e.fileid left join certification_details f on a.fileid=f.fileid " +
-                "left join education_details g on a.fileid=g.fileid left join experience_details h on a.fileid=h.fileid where a.filename='"+filename+"'",null);
+                "left join education_details g on a.fileid=g.fileid left join experience_details h on a.fileid=h.fileid " +
+                "left join profile_photo_file_map i on a.fileid=i.fileid where a.filename='"+filename+"'",null);
         return myCursor;
     }
 
@@ -392,6 +393,29 @@ public class DatabaseQueries {
     public Cursor selectPersonalInterests(String fileid){
 
         Cursor myCursor= db.rawQuery("select * from personal_interests where fileid="+fileid,null);
+        return myCursor;
+
+    }
+
+    public void addProfilePhoto(String filename, String profilePhotoName){
+        filename=filename.replaceAll("'","");
+        long fileid=getFileId(filename);
+        long count = db.compileStatement("select count(*) from profile_photo_file_map " +
+                "where fileid="+ fileid).simpleQueryForLong();
+        if(count > 0){
+            String txtSql = "update profile_photo_file_map set imagename='"+profilePhotoName+"' where fileid="+fileid;
+            db.execSQL(txtSql);
+        }
+        else{
+            String txtSql = "insert into profile_photo_file_map (fileid,imagename) values ("+fileid+",'"+profilePhotoName+"')";
+            db.execSQL(txtSql);
+        }
+        updatePersonalDetailsDate(filename);
+    }
+
+    public Cursor selectProfilePhoto(String fileid){
+
+        Cursor myCursor= db.rawQuery("select * from profile_photo_file_map where fileid="+fileid,null);
         return myCursor;
 
     }
