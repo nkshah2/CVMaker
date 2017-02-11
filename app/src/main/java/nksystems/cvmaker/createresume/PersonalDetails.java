@@ -116,11 +116,11 @@ public class PersonalDetails extends Fragment {
 
             int titlePosition=0;
             int templatePosition=0;
-            if(title.equals("Mr.")){
+            if(title.equals("Mr.")||title.equals("M.")){
                 titlePosition=0;
-            }else if(title.equals("Ms.")){
+            }else if(title.equals("Ms.")||title.equals("Mlle.")){
                 titlePosition=1;
-            }else if(title.equals("Mrs.")){
+            }else if(title.equals("Mrs.")||title.equals("Mme.")){
                 titlePosition=2;
             }else if(title.equals("Dr.")){
                 titlePosition=3;

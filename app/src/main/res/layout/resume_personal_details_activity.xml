@@ -40,7 +40,7 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="Filename"
+                        android:hint="@string/personalFilename"
                         android:textSize="18dp"
                         android:inputType="textCapSentences"
                         android:id="@+id/etFileName"
@@ -90,7 +90,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Objective"
+                android:hint="@string/personalObjective"
                 android:inputType="textMultiLine|textCapSentences"
                 android:id="@+id/etObjective"
                 android:textSize="18dp"
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/etFirstName"
                 android:inputType="textPersonName|textCapWords"
-                android:hint="First Name"
+                android:hint="@string/personalFName"
                 android:textSize="18dp"
                 />
 
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName|textCapWords"
                 android:id="@+id/etLastName"
-                android:hint="Last Name"
+                android:hint="@string/personalLName"
                 android:textSize="18dp"
                 />
 
@@ -173,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/etEmail"
                 android:inputType="textEmailAddress"
-                android:hint="Email"
+                android:hint="@string/personalEmail"
                 android:textSize="18dp"
                 />
 
@@ -238,7 +238,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etAdress"
-                android:hint="Address"
+                android:hint="@string/personalAddress"
                 android:inputType="textMultiLine|textCapSentences"
                 android:maxLines="6"
                 android:nestedScrollingEnabled="true"

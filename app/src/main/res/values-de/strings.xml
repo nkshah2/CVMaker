@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CV Maker</string>
+
+    <!-- HOME TAB -->
+    <string name="homeTabHint">Verwenden Sie die Schaltfläche \'+\' zu schaffen, einen Lebenslauf</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="adText">Display-Anzeigen, um den Entwickler unterstützen (hier klicken)</string>
+
+    <!-- HOME TAB NAMES -->
+    <string name="tabNameHome">ZUHAUSE</string>
+    <string name="tabNameTemplate">SCHABLONEN</string>
+    <string name="tabNameFeedback">REAKTION</string>
+    <string name="deleteWarning">Der Artikel wird entfernt</string>
+    <string name="deleteSnackbarButton">BESTÄTIGEN</string>
+
+
+    <!-- TUTORIAL STRINGS -->
+    <string name="tutorialOptionsMenuTitle">Neue Menüoptionen</string>
+    <string name="tutorialOptionsMenuContent">Überprüfen Sie die neue Menüoptionen aus</string>
+
+    <string name="tutorialFABTitle">Anfang</string>
+    <string name="tutorialFABContent">Klicken Sie hier einen neuen Lebenslauf zu erstellen</string>
+
+    <string name="tutorialInteractTitle">Neue Wege zur Interaktion</string>
+    <string name="tutorialInteractContent">Klicken Sie auf PDF zu öffnen\nKlicken und halten zu ändern\nSchieben nach rechts zu entfernen</string>
+
+
+    <!-- MENU OPTIONS -->
+    <string name="menuChangeTheme">Ändern Sie das Thema</string>
+    <string name="menuRateUs">Kontaktiere uns</string>
+    <string name="menuHelp">Hilf mir</string>
+    <string name="menuTut">Tutorial aktivieren</string>
+
+    <!-- FEEDBACK TAB -->
+    <string name="feedbackHintName">Name</string>
+    <string name="feedbackHintEmail">Email</string>
+    <string name="feedbackHintComment">Kommentar</string>
+    <string name="feedbackBtSubmitText">EINREICHEN</string>
+    <string name="featureRequest">Wenn Sie ein Feature oder Fortsetzungsformular anfordern möchten, senden Sie uns bitte eine E-Mail an nksystems12@gmail.com</string>
+
+    <!-- HELP ACTIVITY -->
+    <string name="help1">Vielen Dank für das Herunterladen CV Maker haben sich die Dinge ein bisschen seit unserer letzten Veröffentlichung geändert.</string>
+    <string name="help2">Zuerst sucht Ihr Hauptbildschirm ein wenig anders.</string>
+    <string name="help3">Sie können sich auf der Liste klicken Sie Ihre PDF-Datei zu öffnen, oder klicken Sie auf und halten Sie Ihre Informationen zu ändern.</string>
+    <string name="help4">die Registerkarte Vorlagen Verwenden Sie die vorhandenen Modelle und verwenden Sie die Registerkarte Kommentare zu senden Sie uns Feedback direkt zu sehen</string>
+    <string name="help5">Sie haben nun ein paar Optionen auf der Speisekarte haben, fühlen sich frei, um das Thema zu etwas zu erkunden und zu ändern, die Sie lieben.</string>
+    <string name="help6">Wählen Sie zum Beispiel die rosa Thema ...</string>
+    <string name="help7">Verwenden Sie die + Taste, um einen neuen Lebenslauf zu erstellen.</string>
+    <string name="help8">Ziehen Sie nach links oder rechts, um die Form des Abschnitts zu ändern, die untere Anzeige zeigt den Fortschritt, wie Sie gehen.</string>
+    <string name="help9">Sie können auch direkt auf Ihren Lebenslauf ziehen \nHinweis zu löschen: Die pdf-Datei existiert immer noch in Ihrem Speicher.</string>
+    <string name="help10">Wenn Sie die Hilfe erneut lesen möchten, verwenden Sie die \'Hilfe\' aus dem Menü.</string>
+    <string name="helpButton">Zurück zum Menü</string>
+
+    <!-- RESUME PAGE HEADERS -->
+    <string-array name="resumePages">
+        <item>Persönliche Daten (1/9)</item>
+        <item>Details zu Bildung (2/9)</item>
+        <item>Bescheinigung (3/9)</item>
+        <item>Erfahrung (4/9)</item>
+        <item>Erfolge (5/9)</item>
+        <item>Fähigkeiten (6/9)</item>
+        <item>Außerschulische (7/9)</item>
+        <item>Persönliche Interessen (8/9)</item>
+        <item>Herunterladen Photo (9/9)</item>
+    </string-array>
+
+    <!-- PERSONAL DETAILS -->
+    <string name="personalFilename">Dateiname</string>
+    <string name="personalObjective">Ziel</string>
+    <string-array name="title">
+        <item>Herr.</item>
+        <item>Fräulein.</item>
+        <item>Frau.</item>
+        <item>Dr.</item>
+    </string-array>
+    <string name="personalFName">Vorname</string>
+    <string name="personalLName">Nachname</string>
+    <string name="personalEmail">Die E-Mail-Adresse</string>
+    <string name="personalAddress">Adresse</string>
+
+    <!-- EDUCATION -->
+    <string name="CGPA">CGPA / Ausbeute</string>
+    <string name="educationSchool">Schule / Institut</string>
+    <string name="educationBoard">Bildungstisch</string>
+    <string name="year">Sterbejahr</string>
+    <string name="collegeName">Name der Hochschule</string>
+    <string name="degree">Grad</string>
+
+    <!-- CERTIFICATION -->
+    <string name="certificationTitle">Titel der Zertifizierung</string>
+    <string name="certificationYear">Jahr Zertifizierung</string>
+
+    <!-- EXPERIENCE -->
+    <string name="companyName">Name des Unternehmens</string>
+    <string name="duration">Ex Zeitraum Oktober 2013 -. Laufende</string>
+    <string name="role">Rolle / Beschreibung</string>
+    <string name="jobDescription">Die Beschreibung</string>
+
+    <!-- ACHHIEVES -->
+    <string name="achieve1">Leistung 1</string>
+    <string name="achieve2">Leistung 2</string>
+    <string name="achieve3">Leistung 3</string>
+    <string name="achieve4">Leistung 4</string>
+    <string name="achieve5">Leistung 5</string>
+    <string name="achieve6">Leistung 6</string>
+
+    <!-- SKILLS -->
+    <string name="skillTitle">Ex. Sprachen</string>
+    <string name="skillinfo">JAVA,C++</string>
+
+    <!-- EXTRA -->
+    <string name="ec1">Aktivität 1</string>
+    <string name="ec2">Aktivität 2</string>
+    <string name="ec3">Aktivität 3</string>
+    <string name="ec4">Aktivität 4</string>
+    <string name="ec5">Aktivität 5</string>
+    <string name="ec6">Aktivität 6</string>
+
+    <string name="personalInterest">Persönliche Interessen / Unterhaltung</string>
+
+</resources>

@@ -3,255 +3,255 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.0.2_33fcb8c234cd141caabe29cc80732ea9223eb3de\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.ToxicBakery.viewpager.transforms\view-pager-transforms\1.2.32\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="392c97a8270ccf3cc7fe6e0a5d97a5e97a61e65c">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.ToxicBakery.viewpager.transforms-view-pager-transforms-1.2.32_6c9cf042e90c30a4b8d57443fad05a15f7b09814\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.0.2_41d5d61df4bdb9162be63c8dba1221400373404a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.2.1_b661cfa4618485a74447fc760d385e57c8e78d35\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\fr.avianey.com.viewpagerindicator\library\2.4.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="bae64da9140d1e78edb6f28a1b4c8831aac4ab88">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\fr.avianey.com.viewpagerindicator-library-2.4.1.1_2b00ab72345835a8775ea282634bdc53307f4a0c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.2.1_7ea425050e88f4a74649896a26a4e64ba7706d57\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\.gradle\caches\modules-2\files-2.1\com.itextpdf\itextg\5.5.9\3580383b2c7db8fa2fee1ffbe1993017a9ea296e\itextg-5.5.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3580383b2c7db8fa2fee1ffbe1993017a9ea296e">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\itextg-5.5.9_b25f43ce159a618620ef9004e91ef5c9c0dfba7e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b8e0372ca6dc89ac4fe22b76eeea4f68ece435b8">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.0.2_382cd09fa995c0ee94d8546a1c2390633275a84b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.0.2_30da264685c9f4147ae7eaf3eb9248b6d42684bb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.2.1_7d0b979f216f3ee3ffe96c8a31bc1385c50f3da2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.github.chenupt.android\springindicator\1.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b7c43c8ddfc4ae2091a33f2882927bb4e3e2fee2">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.chenupt.android-springindicator-1.0.2_695874d44e9d8c4471366ce11fd77ed41cb9af0e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.2.1_e5d271dbad5a097c5393293a69d943548304972b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="673d77a5bbddd766037f088e775df525c46407f0">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.2.1_ac0baba0466fc101f4990fad0d4436a949715b70\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.0.2_1d3ed071b404420f742e25f470c05c4db4ce0563\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.0.2_27ffb10d0f7d230f3a5cee9ebd1480adb97d9bd0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.9.0_b91ff14b03465afd3192e602188db592576a6c74\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.sqliteasset\sqliteassethelper\2.0.1\d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f\sqliteassethelper-2.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\sqliteassethelper-2.0.1_4370ba2b6cf18b7d23427b7f4efda5230d8fcdb8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8b34a85925df845efc4123c95c841a6ede42cc80">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_2054abc58bc2079b2295a895acaca3e62a61128c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\net.steamcrafted\materialiconlib\1.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ff0e1018e7f7d0e7178a7c3eff816574ee7f6718">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\net.steamcrafted-materialiconlib-1.1.1_e1a0d2f48683d7e49b214495e1ca9f65bfba04df\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.4.1_9a26ae1e9d685f5cf49b32b7e8599dce939885da\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.0.2_f5d45c5fc563f8b745705716eec80ac3915c56c2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\jars\classes.jar"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.2.1_f611a5a41253ec526eb72512c4e61917ca5c969d\classes.dex" />
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.2.1_a1d2509ed1ba6c869052b819a2579073ad0f29f2\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="757cbbc7ca014a07f745ea2237459c53f0277ec2">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_81b9dbdf1262b72b752361effb465c4dd54bf119\classes.dex" />
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.2.1_7f5afd8c5cee9252439beeacdf803a0b1c0b92af\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.github.amlcurran.showcaseview\library\5.4.3\jars\classes.jar"
+        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.itextpdf\itextg\5.5.9\3580383b2c7db8fa2fee1ffbe1993017a9ea296e\itextg-5.5.9.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="a06b0579dbe59192ef460e3de04657720925d05b">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.amlcurran.showcaseview-library-5.4.3_aaa641107e4fc28f837807e6d7ea8ae648177df5\classes.dex" />
+        sha1="3580383b2c7db8fa2fee1ffbe1993017a9ea296e">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\itextg-5.5.9_f3c907c75a2e6bf31585fb87641207411825fdaa\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\nksha\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.2.1_d322f3ddfdf8f5f3a509be61fa31cddbcf57742f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.0.2_990f18e1ab103cd95f74a9ee3e8d08900ce0113d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.0.2\jars\classes.jar"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.0.2\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="f4fb6981392ca7680d02fd57d26d6124c141d9d9">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.0.2_eb13b40dff7a0fd4513a152a9d9e93ca4e2bfab7\classes.dex" />
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.0.2_3778cedb8ae9e2d9c36866ba24a99cbb6c74cb49\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.github.chenupt.android\springindicator\1.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b7c43c8ddfc4ae2091a33f2882927bb4e3e2fee2">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.chenupt.android-springindicator-1.0.2_c4388bcebafb8fac97131c4195dd96ff34b5664a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b8e0372ca6dc89ac4fe22b76eeea4f68ece435b8">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.0.2_63dd11863a0330d11cc6f2a63560a7240342795b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.sqliteasset\sqliteassethelper\2.0.1\d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f\sqliteassethelper-2.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\sqliteassethelper-2.0.1_3ee3625c6bd0d7f73baa72fa0965c8a55f405e2a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
-        <dex dex="C:\Users\nksha\Desktop\CV Maker Current Version\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.2.1_b20184920d2a0e66d53a2082a9e7261f3f88cca0\classes.dex" />
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.2.1_438d607bc51f4cacadd37e690f4f0f2359275919\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.4.1_d72f3f481361a133d6eaac3f7f7deafa133ad121\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1175fea868d5839ac33f4d39bb9282309023ab06">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_704c3fe3af9f0ddd2935ce7e16e69cf26e26ed2d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.2.1_f42f8d55b0d50f1fd9f0a9d7d9ff325a5488bd79\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.0.2_fe8f673e67426336b2b9d7b794e0cf2372396d52\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.2.1_25c6f4389bde474392587b87bb9fb79ff5bcef2e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.0.2_3b770884c3433f1948ba5c8e496c5d5fece37082\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="de5d6384eec6f43faa749b99f667073120397fe3">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_fc4da281e1fa706718138258940c0980a1807456\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.2.1_a857399364f49c5256b0f8e6220d9f71c385ea99\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SONY\AppData\Local\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.2.1_e38ed876ea7aa85732c6717118e6514d5b0a319f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.ToxicBakery.viewpager.transforms\view-pager-transforms\1.2.32\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="392c97a8270ccf3cc7fe6e0a5d97a5e97a61e65c">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.ToxicBakery.viewpager.transforms-view-pager-transforms-1.2.32_ecb029c0e4aaf1155e4b0b8723cf88fa5ec98e46\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.0.2_e823708b2d9ff14b641e4eaa5a0991631b25222d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.0.2_d62eeb89d93b8a39cab8ce9ae44451e18ddf6af2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.github.amlcurran.showcaseview\library\5.4.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a06b0579dbe59192ef460e3de04657720925d05b">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.amlcurran.showcaseview-library-5.4.3_d04a4b4b6e8e6ca7e983469c09fb1d7ac54b3d17\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.0.2_a3cc7ee5256844e830ad75412928169cb717bfe8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.0.2_730f6e310543ea3c12ed56452aa597de3a03d908\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\fr.avianey.com.viewpagerindicator\library\2.4.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="bae64da9140d1e78edb6f28a1b4c8831aac4ab88">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\fr.avianey.com.viewpagerindicator-library-2.4.1.1_58a8fefdcd3906e9fc5562f1e9e113f265d65887\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.0.2_915a565e77a37e3ebe375f68427a00580da74114\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.2.1_3922bb4840988baa23cffcde7c4dec6623f87a07\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SONY\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.9.0_c914cdea2be3211379b187ca1cd9e8f6b0579b2f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\exploded-aar\net.steamcrafted\materialiconlib\1.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ff0e1018e7f7d0e7178a7c3eff816574ee7f6718">
+        <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\net.steamcrafted-materialiconlib-1.1.1_3191547069df335ec0c51eb0fce2bc4e12197349\classes.dex" />
     </item>
 
 </items>

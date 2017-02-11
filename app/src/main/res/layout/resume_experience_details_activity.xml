@@ -46,7 +46,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Company Name"
+                android:hint="@string/companyName"
                 android:id="@+id/etCoName1"
                 android:inputType="textCapSentences"
                 />
@@ -63,7 +63,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Duration Eg. Oct 2013 - Present"
+                android:hint="@string/duration"
                 android:id="@+id/etDuration1"
                 android:inputType="textCapSentences"
                 />
@@ -88,7 +88,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Role/Designation"
+                android:hint="@string/role"
                 android:id="@+id/etRole1"
                 android:inputType="textCapSentences"
                 />
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:hint="Role Description"
+                android:hint="Role @string/jobDescription"
                 android:id="@+id/etRoleDesc1"
                 android:inputType="textMultiLine"
                 />-->
@@ -113,7 +113,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description"
+                android:hint="@string/jobDescription"
                 android:id="@+id/etProDesc1"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -148,7 +148,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Company Name"
+                android:hint="@string/companyName"
                 android:id="@+id/etCoName2"
                 android:inputType="textCapSentences"
                 />
@@ -164,7 +164,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Duration Eg. Oct 2013 - Present"
+                android:hint="@string/duration"
                 android:id="@+id/etDuration2"
                 android:inputType="textCapSentences"
                 />
@@ -190,7 +190,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Role/Designation"
+                android:hint="@string/role"
                 android:id="@+id/etRole2"
                 android:inputType="textCapSentences"
                 />
@@ -201,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:hint="Role Description"
+                android:hint="Role @string/jobDescription"
                 android:id="@+id/etRoleDesc2"
                 android:inputType="textMultiLine"
                 />-->
@@ -216,7 +216,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description"
+                android:hint="@string/jobDescription"
                 android:id="@+id/etProDesc2"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -252,7 +252,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Company Name"
+                android:hint="@string/companyName"
                 android:id="@+id/etCoName3"
                 android:inputType="textCapSentences"
                 />
@@ -268,7 +268,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Duration Eg. Oct 2013 - Present"
+                android:hint="@string/duration"
                 android:id="@+id/etDuration3"
                 android:inputType="textCapSentences"
                 />
@@ -294,7 +294,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Role/Designation"
+                android:hint="@string/role"
                 android:id="@+id/etRole3"
                 android:inputType="textCapSentences"
                 />
@@ -305,7 +305,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:hint="Role Description"
+                android:hint="Role @string/jobDescription"
                 android:id="@+id/etRoleDesc3"
                 android:inputType="textMultiLine"
                 />-->
@@ -320,7 +320,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description"
+                android:hint="@string/jobDescription"
                 android:id="@+id/etProDesc3"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -356,7 +356,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Company Name"
+                android:hint="@string/companyName"
                 android:id="@+id/etCoName4"
                 android:inputType="textCapSentences"
                 />
@@ -372,7 +372,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Duration Eg. Oct 2013 - Present"
+                android:hint="@string/duration"
                 android:id="@+id/etDuration4"
                 android:inputType="textCapSentences"
                 />
@@ -398,7 +398,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Role/Designation"
+                android:hint="@string/role"
                 android:id="@+id/etRole4"
                 android:inputType="textCapSentences"
                 />
@@ -409,7 +409,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:hint="Role Description"
+                android:hint="Role @string/jobDescription"
                 android:id="@+id/etRoleDesc4"
                 android:inputType="textMultiLine"
                 />-->
@@ -424,7 +424,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description"
+                android:hint="@string/jobDescription"
                 android:id="@+id/etProDesc4"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -460,7 +460,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Company Name"
+                android:hint="@string/companyName"
                 android:id="@+id/etCoName5"
                 android:inputType="textCapSentences"
                 />
@@ -476,7 +476,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Duration Eg. Oct 2013 - Present"
+                android:hint="@string/duration"
                 android:id="@+id/etDuration5"
                 android:inputType="textCapSentences"
                 />
@@ -502,7 +502,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Role/Designation"
+                android:hint="@string/role"
                 android:id="@+id/etRole5"
                 android:inputType="textCapSentences"
                 />
@@ -513,7 +513,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:hint="Role Description"
+                android:hint="Role @string/jobDescription"
                 android:id="@+id/etRoleDesc5"
                 android:inputType="textMultiLine"
                 />-->
@@ -528,7 +528,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Project Description"
+                android:hint="Project @string/jobDescription"
                 android:id="@+id/etProDesc5"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -564,7 +564,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Company Name"
+                android:hint="@string/companyName"
                 android:id="@+id/etCoName6"
                 android:inputType="textCapSentences"
                 />
@@ -580,7 +580,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Duration Eg. Oct 2013 - Present"
+                android:hint="@string/duration"
                 android:id="@+id/etDuration6"
                 android:inputType="textCapSentences"
                 />
@@ -606,7 +606,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Role/Designation"
+                android:hint="@string/role"
                 android:id="@+id/etRole6"
                 android:inputType="textCapSentences"
                 />
@@ -617,7 +617,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:hint="Role Description"
+                android:hint="Role @string/jobDescription"
                 android:id="@+id/etRoleDesc6"
                 android:inputType="textMultiLine"
                 />-->
@@ -632,7 +632,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description"
+                android:hint="@string/jobDescription"
                 android:id="@+id/etProDesc6"
                 android:inputType="textMultiLine|textCapSentences"
                 />

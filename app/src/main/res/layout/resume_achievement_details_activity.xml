@@ -36,7 +36,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Achievement 1"
+                android:hint="@string/achieve1"
                 android:id="@+id/etAchieveDesc1"
                 android:inputType="textCapSentences"
                 />
@@ -63,7 +63,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Achievement 2"
+                android:hint="@string/achieve2"
                 android:id="@+id/etAchieveDesc2"
                 android:inputType="textCapSentences"
                 />
@@ -90,7 +90,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Achievement 3"
+                android:hint="@string/achieve3"
                 android:id="@+id/etAchieveDesc3"
                 android:inputType="textCapSentences"
                 />
@@ -117,7 +117,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Achievement 4"
+                android:hint="@string/achieve4"
                 android:id="@+id/etAchieveDesc4"
                 android:inputType="textCapSentences"
                 />
@@ -144,7 +144,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Achievement 5"
+                android:hint="@string/achieve5"
                 android:id="@+id/etAchieveDesc5"
                 android:inputType="textCapSentences"
                 />
@@ -171,7 +171,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Achievement 6"
+                android:hint="@string/achieve6"
                 android:id="@+id/etAchieveDesc6"
                 android:inputType="textCapSentences"
                 />

@@ -46,7 +46,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ex: Languages"
+                android:hint="@string/skillTitle"
                 android:id="@+id/etDomain1"
                 android:inputType="textCapSentences"
                 />
@@ -63,7 +63,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="JAVA, C++"
+                android:hint="@string/skillinfo"
                 android:id="@+id/etSkill1"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -101,7 +101,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ex: Languages"
+                android:hint="@string/skillTitle"
                 android:id="@+id/etDomain2"
                 android:inputType="textCapSentences"
                 />
@@ -118,7 +118,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="JAVA, C++"
+                android:hint="@string/skillinfo"
                 android:id="@+id/etSkill2"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -157,7 +157,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ex: Languages"
+                android:hint="@string/skillTitle"
                 android:id="@+id/etDomain3"
                 android:inputType="textCapSentences"
                 />
@@ -174,7 +174,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="JAVA, C++"
+                android:hint="@string/skillinfo"
                 android:id="@+id/etSkill3"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -213,7 +213,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ex: Languages"
+                android:hint="@string/skillTitle"
                 android:id="@+id/etDomain4"
                 android:inputType="textCapSentences"
                 />
@@ -230,7 +230,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="JAVA, C++"
+                android:hint="@string/skillinfo"
                 android:id="@+id/etSkill4"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -269,7 +269,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ex: Languages"
+                android:hint="@string/skillTitle"
                 android:id="@+id/etDomain5"
                 android:inputType="textCapSentences"
                 />
@@ -286,7 +286,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="JAVA, C++"
+                android:hint="@string/skillinfo"
                 android:id="@+id/etSkill5"
                 android:inputType="textMultiLine|textCapSentences"
                 />
@@ -324,7 +324,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ex: Languages"
+                android:hint="@string/skillTitle"
                 android:id="@+id/etDomain6"
                 android:inputType="textCapSentences"
                 />
@@ -341,7 +341,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="JAVA, C++"
+                android:hint="@string/skillinfo"
                 android:id="@+id/etSkill6"
                 android:inputType="textMultiLine|textCapSentences"
                 />
