@@ -104,6 +104,8 @@
     <string name="tabNameHome">HOME</string>
     <string name="tabNameTemplate">TEMPLATES</string>
     <string name="tabNameFeedback">FEEDBACK</string>
+    <string name="deleteWarning">Item will be deleted</string>
+    <string name="deleteSnackbarButton">CONFIRM</string>
 
     <!-- TUTORIAL STRINGS -->
     <string name="tutorialOptionsMenuTitle">New Menu Options</string>
@@ -126,7 +128,19 @@
     <string name="feedbackHintEmail">Email Address</string>
     <string name="feedbackHintComment">Comment</string>
     <string name="feedbackBtSubmitText">SUBMIT</string>
+    <string name="featureRequest">If you would like to request a feature or a CV format please email us at nksystems12@gmail.com</string>
 
-
+    <!-- HELP ACTIVITY -->
+    <string name="help1">Thank You for downloading CV Maker, things have changed a little since our last publish.</string>
+    <string name="help2">First things first, your main screen looks a little different.</string>
+    <string name="help3">You can click on the list to open your pdf file or click and hold to edit your details.</string>
+    <string name="help4">Use the templates tab to see existing templates, and use the feedback tab to send feedback directly to us</string>
+    <string name="help5">You now have a few options in the menu, feel free to explore and change the theme to something you enjoy.</string>
+    <string name="help6">For example, picking pink as your theme...</string>
+    <string name="help7">Use the + button to start making a new CV.</string>
+    <string name="help8">Swipe left or right in the form to change sections, the bottom indicator will show your progress as you swipe.</string>
+    <string name="help9">You can also swipe right on your CV to delete it \nNOTE: The pdf file will still exist in your storage.</string>
+    <string name="help10">If you ever want to read this help again, use the \'Help\' option in the menu.</string>
+    <string name="helpButton">Return to Menu</string>
 
 </resources>

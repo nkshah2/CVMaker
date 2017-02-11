@@ -12,6 +12,8 @@
     <string name="tabNameHome">ACCUEIL</string>
     <string name="tabNameTemplate">MODÈLES</string>
     <string name="tabNameFeedback">RÉACTION</string>
+    <string name="deleteWarning">L\'élément sera supprimé</string>
+    <string name="deleteSnackbarButton">CONFIRMER</string>
 
 
     <!-- TUTORIAL STRINGS -->
@@ -36,5 +38,19 @@
     <string name="feedbackHintEmail">La adresse électronique</string>
     <string name="feedbackHintComment">Commentaire</string>
     <string name="feedbackBtSubmitText">SOUMETTRE</string>
+    <string name="featureRequest">Si vous souhaitez demander une fonctionnalité ou un CV, veuillez nous envoyer un courriel à nksystems12@gmail.com</string>
+
+    <!-- HELP ACTIVITY -->
+    <string name="help1">Merci pour le téléchargement de CV Maker, les choses ont changé un peu depuis notre dernière publication.</string>
+    <string name="help2">Tout d\'abord, votre écran principal ressemble un peu différent.</string>
+    <string name="help3">Vous pouvez cliquer sur la liste pour ouvrir votre fichier pdf ou cliquez et maintenez pour modifier vos informations.</string>
+    <string name="help4">Utilisez l\'onglet Modèles pour voir les modèles existants et utilisez l\'onglet Commentaires pour nous envoyer vos commentaires directement</string>
+    <string name="help5">Vous avez maintenant quelques options dans le menu, n\'hésitez pas à explorer et à changer le thème à quelque chose que vous aimez.</string>
+    <string name="help6">Par exemple, choisir le rose comme thème ...</string>
+    <string name="help7">Utilisez le bouton + pour commencer à créer un nouveau CV.</string>
+    <string name="help8">Faites glisser vers la gauche ou vers la droite dans le formulaire pour changer de section, l\'indicateur du bas affichera votre progression au fur et à mesure.</string>
+    <string name="help9">Vous pouvez également glisser directement sur votre CV pour le supprimer \nREMARQUE: Le fichier pdf existe toujours dans votre stockage.</string>
+    <string name="help10">Si vous voulez lire cette aide à nouveau, utilisez l\'option \'Aide\' dans le menu.</string>
+    <string name="helpButton">Retour au menu</string>
 
 </resources>

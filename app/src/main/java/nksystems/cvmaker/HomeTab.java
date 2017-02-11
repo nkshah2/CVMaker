@@ -212,8 +212,8 @@ String currentTheme;
                     final String filename=infos[0];
 
 
-                    final Snackbar mySnackBar= Snackbar.make(root,"Item will be deleted",Snackbar.LENGTH_LONG);
-                    mySnackBar.setAction("CONFIRM", new View.OnClickListener() {
+                    final Snackbar mySnackBar= Snackbar.make(root,HomeTab.this.getResources().getString(R.string.deleteWarning),Snackbar.LENGTH_LONG);
+                    mySnackBar.setAction(HomeTab.this.getResources().getString(R.string.deleteSnackbarButton), new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             dbQueries.deleteFileFromDb(filename);
