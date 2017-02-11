@@ -12,6 +12,7 @@ import nksystems.cvmaker.createresume.ExtraCurricularDetails;
 import nksystems.cvmaker.createresume.PersonalDetails;
 import nksystems.cvmaker.createresume.PersonalInterestDetails;
 import nksystems.cvmaker.createresume.SkillDetails;
+import nksystems.cvmaker.createresume.UploadProfilePhoto;
 
 /**
  * Created by Charmy on 15/09/2016.
@@ -39,12 +40,14 @@ public class ResumeAdapter extends FragmentPagerAdapter{
                 return new ExtraCurricularDetails();
             case 7:
                 return new PersonalInterestDetails();
+            case 8:
+                return new UploadProfilePhoto();
         }
         return null;
     }
 
     @Override
     public int getCount(){
-        return 8;
+        return 9;
     }
 }

@@ -102,6 +102,7 @@ import nksystems.cvmaker.createresume.ExtraCurricularDetails;
 import nksystems.cvmaker.createresume.PersonalDetails;
 import nksystems.cvmaker.createresume.PersonalInterestDetails;
 import nksystems.cvmaker.createresume.SkillDetails;
+import nksystems.cvmaker.createresume.UploadProfilePhoto;
 
 public class CreateResume extends AppCompatActivity {
 
@@ -146,8 +147,8 @@ public class CreateResume extends AppCompatActivity {
     SimpleDateFormat dateFormat= new SimpleDateFormat("dd/MM/yyyy");
     private ResumeAdapter resumeAdapter;
     ViewPager viewPager;
-    private String[] resumeTabs={"Personal Information (1/8)","Education Details (2/8)","Certification (3/8)","Experience (4/8)","Achievements (5/8)","Skills (6/8)",
-            "Extra-Curriculars (7/8)","Personal Interests (8/8)"};
+    private String[] resumeTabs={"Personal Information (1/9)","Education Details (2/9)","Certification (3/9)","Experience (4/9)",
+            "Achievements (5/9)","Skills (6/9)","Extra-Curriculars (7/9)","Personal Interests (8/9)","Photo Upload (9/9)"};
     ViewPager pagerRoot;
     PersonalDetails personalDetails;
     EducationDetails educationDetails;
@@ -157,6 +158,7 @@ public class CreateResume extends AppCompatActivity {
     SkillDetails skillDetails;
     ExtraCurricularDetails extraCurricularDetails;
     PersonalInterestDetails personalInterestDetails;
+    UploadProfilePhoto uploadProfilePhoto;
     private android.support.v7.app.ActionBar actionBar;
     DatabaseObject dbObject;
     SQLiteDatabase theme;
@@ -311,6 +313,7 @@ public class CreateResume extends AppCompatActivity {
         skillDetails = new SkillDetails();
         extraCurricularDetails = new ExtraCurricularDetails();
         personalInterestDetails = new PersonalInterestDetails();
+        uploadProfilePhoto = new UploadProfilePhoto();
 
         fragmentTransaction.commit();
 
