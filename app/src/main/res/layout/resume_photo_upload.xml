@@ -31,8 +31,17 @@
                 android:background="@color/colorPrimary"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="Capture Image"
+                android:text="Select Image"
                 android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                />
 
         </LinearLayout>
 

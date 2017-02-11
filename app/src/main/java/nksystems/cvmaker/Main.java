@@ -43,10 +43,13 @@ public class Main extends AppCompatActivity {
 
         Cursor tables=theme.rawQuery("select * from sqlite_master where type='table'",null);
         tables.moveToFirst();
-        boolean isNew=false;
+        boolean isNew=false,profileDbExist=false;
         for(int i=0;i<tables.getCount();i++){
             if(tables.getString(tables.getColumnIndex("tbl_name")).equalsIgnoreCase("database_theme")){
                 isNew=true;
+            }
+            if(tables.getString(tables.getColumnIndex("tbl_name")).equalsIgnoreCase("profile_photo_file_map")){
+                profileDbExist=true;
             }
             tables.moveToNext();
         }
@@ -60,6 +63,9 @@ public class Main extends AppCompatActivity {
             isNew=true;
         }
 
+        if(!profileDbExist){
+            theme.execSQL("create table profile_photo_file_map (fileid integer,imagename varchar)");
+        }
 
 
         Cursor cursor=theme.rawQuery("select * from database_theme",null);
