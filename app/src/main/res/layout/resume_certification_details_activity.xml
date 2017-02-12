@@ -46,7 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertTitle1"
-                    android:hint="Certificate Title"
+                    android:hint="@string/certificationTitle"
                     android:inputType="textCapSentences"
 
                     />
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertYear1"
-                    android:hint="Certificate Year"
+                    android:hint="@string/certificationYear"
                     android:inputType="date"
                     />
 
@@ -104,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertTitle2"
-                    android:hint="Certificate Title"
+                    android:hint="@string/certificationTitle"
                     android:inputType="textCapSentences"
                     />
 
@@ -124,7 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertYear2"
-                    android:hint="Certificate Year"
+                    android:hint="@string/certificationYear"
                     android:inputType="date"
                     />
 
@@ -161,7 +161,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertTitle3"
-                    android:hint="Certificate Title"
+                    android:hint="@string/certificationTitle"
                     android:inputType="textCapSentences"
                     />
 
@@ -181,7 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertYear3"
-                    android:hint="Certificate Year"
+                    android:hint="@string/certificationYear"
                     android:inputType="date"
                     />
 
@@ -218,7 +218,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertTitle4"
-                    android:hint="Certificate Title"
+                    android:hint="@string/certificationTitle"
                     android:inputType="textCapSentences"
                     />
 
@@ -238,7 +238,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertYear4"
-                    android:hint="Certificate Year"
+                    android:hint="@string/certificationYear"
                     android:inputType="date"
                     />
 
@@ -275,7 +275,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertTitle5"
-                    android:hint="Certificate Title"
+                    android:hint="@string/certificationTitle"
                     android:inputType="textCapSentences"
                     />
 
@@ -295,7 +295,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertYear5"
-                    android:hint="Certificate Year"
+                    android:hint="@string/certificationYear"
                     android:inputType="date"
                     />
                 </android.support.design.widget.TextInputLayout>
@@ -331,7 +331,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertTitle6"
-                    android:hint="Certificate Title"
+                    android:hint="@string/certificationTitle"
                     android:inputType="textCapSentences"
                     />
 
@@ -351,7 +351,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/etCertYear6"
-                    android:hint="Certificate Year"
+                    android:hint="@string/certificationYear"
                     android:inputType="date"
                     />
 

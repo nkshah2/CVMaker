@@ -12,6 +12,8 @@
     <string name="tabNameHome">ACCUEIL</string>
     <string name="tabNameTemplate">MODÈLES</string>
     <string name="tabNameFeedback">RÉACTION</string>
+    <string name="deleteWarning">L\'élément sera supprimé</string>
+    <string name="deleteSnackbarButton">CONFIRMER</string>
 
 
     <!-- TUTORIAL STRINGS -->
@@ -36,5 +38,86 @@
     <string name="feedbackHintEmail">La adresse électronique</string>
     <string name="feedbackHintComment">Commentaire</string>
     <string name="feedbackBtSubmitText">SOUMETTRE</string>
+    <string name="featureRequest">Si vous souhaitez demander une fonctionnalité ou un modèle de CV, envoyez-nous un courriel à nksystems12@gmail.com</string>
+
+    <!-- HELP ACTIVITY -->
+    <string name="help1">Merci pour le téléchargement de CV Maker, les choses ont changé un peu depuis notre dernière publication.</string>
+    <string name="help2">Tout d\'abord, votre écran principal ressemble un peu différent.</string>
+    <string name="help3">Vous pouvez cliquer sur la liste pour ouvrir votre fichier pdf ou cliquez et maintenez pour modifier vos informations.</string>
+    <string name="help4">Utilisez l\'onglet Modèles pour voir les modèles existants et utilisez l\'onglet Commentaires pour nous envoyer vos commentaires directement</string>
+    <string name="help5">Vous avez maintenant quelques options dans le menu, n\'hésitez pas à explorer et à changer le thème à quelque chose que vous aimez.</string>
+    <string name="help6">Par exemple, choisir le rose comme thème ...</string>
+    <string name="help7">Utilisez le bouton + pour commencer à créer un nouveau CV.</string>
+    <string name="help8">Faites glisser vers la gauche ou vers la droite dans le formulaire pour changer de section, l\'indicateur du bas affichera votre progression au fur et à mesure.</string>
+    <string name="help9">Vous pouvez également glisser directement sur votre CV pour le supprimer \nREMARQUE: Le fichier pdf existe toujours dans votre stockage.</string>
+    <string name="help10">Si vous voulez lire cette aide à nouveau, utilisez l\'option \'Aide\' dans le menu.</string>
+    <string name="helpButton">Retour au menu</string>
+
+    <!-- RESUME PAGE HEADERS -->
+    <string-array name="resumePages">
+        <item>Informations personnelles (1/9)</item>
+        <item>Détails sur l\'éducation (2/9)</item>
+        <item>Certification (3/9)</item>
+        <item>Expérience (4/9)</item>
+        <item>Réalisations (5/9)</item>
+        <item>Compétences (6/9)</item>
+        <item>Extra curriculaire (7/9)</item>
+        <item>Intérêts personnels (8/9)</item>
+        <item>Téléchargement photo (9/9)</item>
+    </string-array>
+
+    <!-- PERSONAL DETAILS -->
+    <string name="personalFilename">Nom de fichier</string>
+    <string name="personalObjective">Objectif</string>
+    <string-array name="title">
+        <item>M.</item>
+        <item>Mlle.</item>
+        <item>Mme.</item>
+        <item>Dr.</item>
+    </string-array>
+    <string name="personalFName">Prénom</string>
+    <string name="personalLName">Nom de famille</string>
+    <string name="personalEmail">La adresse électronique</string>
+    <string name="personalAddress">Adresse</string>
+
+    <!-- EDUCATION -->
+    <string name="CGPA">CGPA / Pourcentage</string>
+    <string name="educationSchool">École / Institut</string>
+    <string name="educationBoard">Tableau éducatif</string>
+    <string name="year">Année de décès</string>
+    <string name="collegeName">Nom de l\'université</string>
+    <string name="degree">Le diplôme</string>
+
+    <!-- CERTIFICATION -->
+    <string name="certificationTitle">Titre de la certification</string>
+    <string name="certificationYear">Année de certification</string>
+
+    <!-- EXPERIENCE -->
+    <string name="companyName">Nom de la compagnie</string>
+    <string name="duration">Durée Ex. Oct 2013 - En cours</string>
+    <string name="role">Rôle / Désignation</string>
+    <string name="jobDescription">La description</string>
+
+    <!-- ACHHIEVES -->
+    <string name="achieve1">Réussite 1</string>
+    <string name="achieve2">Réussite 2</string>
+    <string name="achieve3">Réussite 3</string>
+    <string name="achieve4">Réussite 4</string>
+    <string name="achieve5">Réussite 5</string>
+    <string name="achieve6">Réussite 6</string>
+
+    <!-- SKILLS -->
+    <string name="skillTitle">Ex. Langues</string>
+    <string name="skillinfo">JAVA,C++</string>
+
+    <!-- EXTRA -->
+    <string name="ec1">Activité 1</string>
+    <string name="ec2">Activité 2</string>
+    <string name="ec3">Activité 3</string>
+    <string name="ec4">Activité 4</string>
+    <string name="ec5">Activité 5</string>
+    <string name="ec6">Activité 6</string>
+
+    <string name="personalInterest">Intérêts personnels / Loisirs</string>
 
 </resources>

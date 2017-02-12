@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CV Maker</string>
+
 
     <string name="title_activity_loading">Loading</string>
     <string name="dummy_button">Dummy Button</string>
@@ -24,12 +24,7 @@
         <item>NMIMS</item>
         <item>Harvard</item>
     </string-array>
-    <string-array name="title">
-        <item>Mr.</item>
-        <item>Ms.</item>
-        <item>Mrs.</item>
-        <item>Dr.</item>
-    </string-array>
+
     <string-array name="colors">
         <item>#EF9A9A</item>
         <item>#9FA8DA</item>
@@ -94,6 +89,11 @@
     </string-array>
 
 
+
+
+
+    <string name="app_name">CV Maker</string>
+
     <!-- HOME TAB -->
     <string name="homeTabHint">Use the \'+\' button to create a CV</string>
 
@@ -104,15 +104,17 @@
     <string name="tabNameHome">HOME</string>
     <string name="tabNameTemplate">TEMPLATES</string>
     <string name="tabNameFeedback">FEEDBACK</string>
+    <string name="deleteWarning">Item will be deleted</string>
+    <string name="deleteSnackbarButton">CONFIRM</string>
 
     <!-- TUTORIAL STRINGS -->
     <string name="tutorialOptionsMenuTitle">New Menu Options</string>
     <string name="tutorialOptionsMenuContent">Check out the new menu options</string>
 
-    <string name="tutorialFABTitle">"Get Started"</string>
+    <string name="tutorialFABTitle">Get Started</string>
     <string name="tutorialFABContent">Click here to create a new CV</string>
 
-    <string name="tutorialInteractTitle">"New ways to interact"</string>
+    <string name="tutorialInteractTitle">New ways to interact</string>
     <string name="tutorialInteractContent">Click on it to open the PDF\nClick and hold to edit\nSwipe right to delete</string>
 
     <!-- MENU OPTIONS -->
@@ -126,7 +128,87 @@
     <string name="feedbackHintEmail">Email Address</string>
     <string name="feedbackHintComment">Comment</string>
     <string name="feedbackBtSubmitText">SUBMIT</string>
+    <string name="featureRequest">If you would like to request a feature or a CV template please email us at nksystems12@gmail.com</string>
+
+    <!-- HELP ACTIVITY -->
+    <string name="help1">Thank You for downloading CV Maker, things have changed a little since our last publish.</string>
+    <string name="help2">First things first, your main screen looks a little different.</string>
+    <string name="help3">You can click on the list to open your pdf file or click and hold to edit your details.</string>
+    <string name="help4">Use the templates tab to see existing templates, and use the feedback tab to send feedback directly to us</string>
+    <string name="help5">You now have a few options in the menu, feel free to explore and change the theme to something you enjoy.</string>
+    <string name="help6">For example, picking pink as your theme...</string>
+    <string name="help7">Use the + button to start making a new CV.</string>
+    <string name="help8">Swipe left or right in the form to change sections, the bottom indicator will show your progress as you swipe.</string>
+    <string name="help9">You can also swipe right on your CV to delete it \nNOTE: The pdf file will still exist in your storage.</string>
+    <string name="help10">If you ever want to read this help again, use the \'Help\' option in the menu.</string>
+    <string name="helpButton">Return to Menu</string>
+
+    <!-- RESUME PAGE HEADERS -->
+    <string-array name="resumePages">
+        <item>Personal Information (1/9)</item>
+        <item>Education Details (2/9)</item>
+        <item>Certification (3/9)</item>
+        <item>Experience (4/9)</item>
+        <item>Achievements (5/9)</item>
+        <item>Skills (6/9)</item>
+        <item>Extra Curricular (7/9)</item>
+        <item>Personal Interests (8/9)</item>
+        <item>Photo Upload (9/9)</item>
+    </string-array>
+
+    <!-- PERSONAL DETAILS -->
+    <string name="personalFilename">Filename</string>
+    <string name="personalObjective">Objective</string>
+    <string-array name="title">
+        <item>Mr.</item>
+        <item>Ms.</item>
+        <item>Mrs.</item>
+        <item>Dr.</item>
+    </string-array>
+    <string name="personalFName">First Name</string>
+    <string name="personalLName">Last Name</string>
+    <string name="personalEmail">Email</string>
+    <string name="personalAddress">Address</string>
 
 
+    <!-- EDUCATION -->
+    <string name="CGPA">CGPA/Percentage of passing</string>
+    <string name="educationSchool">School/Institute</string>
+    <string name="educationBoard">Board</string>
+    <string name="year">Year of passing</string>
+    <string name="collegeName">College Name</string>
+    <string name="degree">Degree</string>
+
+    <!-- CERTIFICATION -->
+    <string name="certificationTitle">Certification Title</string>
+    <string name="certificationYear">Certification Year</string>
+
+    <!-- EXPERIENCE -->
+    <string name="companyName">Company Name</string>
+    <string name="duration">Duration Ex. Oct 2013 - Ongoing</string>
+    <string name="role">Role/Designation</string>
+    <string name="jobDescription">Description</string>
+
+    <!-- ACHHIEVES -->
+    <string name="achieve1">Achievement 1</string>
+    <string name="achieve2">Achievement 2</string>
+    <string name="achieve3">Achievement 3</string>
+    <string name="achieve4">Achievement 4</string>
+    <string name="achieve5">Achievement 5</string>
+    <string name="achieve6">Achievement 6</string>
+
+    <!-- SKILLS -->
+    <string name="skillTitle">Ex. Languages</string>
+    <string name="skillinfo">JAVA,C++</string>
+
+    <!-- EXTRA -->
+    <string name="ec1">Activity 1</string>
+    <string name="ec2">Activity 2</string>
+    <string name="ec3">Activity 3</string>
+    <string name="ec4">Activity 4</string>
+    <string name="ec5">Activity 5</string>
+    <string name="ec6">Activity 6</string>
+
+    <string name="personalInterest">Personal Interests/Hobbies</string>
 
 </resources>

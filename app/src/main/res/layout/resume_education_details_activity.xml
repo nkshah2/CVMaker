@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etTenthGrade"
-                android:hint="CGPA/Percentage of passing"
+                android:hint="@string/CGPA"
                 android:inputType="phone"
                 android:textSize="18dp"
                 />
@@ -70,7 +70,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="School/Institute"
+                android:hint="@string/educationSchool"
                 android:id="@+id/etTenthSchool"
                 android:inputType="textCapWords"
                 android:textSize="18dp"
@@ -89,7 +89,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Board"
+                android:hint="@string/educationBoard"
                 android:id="@+id/etTenthBoard"
                 android:inputType="textCapSentences"
                 android:textSize="18dp"
@@ -108,7 +108,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Year of passing"
+                android:hint="@string/year"
                 android:id="@+id/etTenthYOP"
                 android:inputType="number"
                 android:textSize="18dp"
@@ -148,7 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etTwelfthCGPA"
-                android:hint="CGPA/Percentage of passing"
+                android:hint="@string/CGPA"
                 android:inputType="phone"
                 android:textSize="18dp"
                 />
@@ -167,7 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etTwelfthInstitute"
-                android:hint="Institute"
+                android:hint="@string/educationSchool"
                 android:inputType="textCapWords"
                 android:textSize="18dp"
                 />
@@ -186,7 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etTwelfthBoard"
-                android:hint="Board"
+                android:hint="@string/educationBoard"
                 android:inputType="textCapSentences"
                 android:textSize="18dp"
                 />
@@ -205,7 +205,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etTwelfthYOP"
-                android:hint="Year of passing"
+                android:hint="@string/year"
                 android:inputType="number"
                 android:textSize="18dp"
                 />
@@ -245,7 +245,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etDipCGPA"
-                android:hint="CGPA/Percentage of passing"
+                android:hint="@string/CGPA"
                 android:inputType="phone"
                 android:textSize="18dp"
                 />
@@ -264,7 +264,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etDipInsti"
-                android:hint="Institute"
+                android:hint="@string/educationSchool"
                 android:inputType="textCapWords"
                 android:textSize="18dp"
                 />
@@ -283,7 +283,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etDipBoard"
-                android:hint="Board"
+                android:hint="@string/educationBoard"
                 android:inputType="textCapSentences"
                 android:textSize="18dp"
                 />
@@ -302,7 +302,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etDipYOP"
-                android:hint="Year of passing"
+                android:hint="@string/year"
                 android:inputType="number"
                 android:textSize="18dp"
                 />
@@ -342,7 +342,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etCollegeCGPA"
-                android:hint="CGPA/Percentage of passing"
+                android:hint="@string/CGPA"
                 android:inputType="phone"
                 android:textSize="18dp"
                 />
@@ -360,7 +360,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etCollegeCollege"
-                android:hint="College Name"
+                android:hint="@string/collegeName"
                 android:inputType="textCapWords"
                 android:textSize="18dp"
                 />
@@ -379,7 +379,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etCollegeDegree"
-                android:hint="Degree"
+                android:hint="@string/degree"
                 android:inputType="textCapSentences"
                 android:textSize="18dp"
                 />
@@ -398,7 +398,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etCollegeBoard"
-                android:hint="Board/Institute"
+                android:hint="@string/educationBoard"
                 android:inputType="textCapSentences"
                 android:textSize="18dp"
                 />
@@ -417,7 +417,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etCollegeYOP"
-                android:hint="Year of passing"
+                android:hint="@string/year"
                 android:inputType="number"
                 android:textSize="18dp"
                 />
@@ -457,7 +457,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etPgCollege"
-                android:hint="College"
+                android:hint="@string/collegeName"
                 android:inputType="textCapWords"
                 android:textSize="18dp"
                 />
@@ -476,7 +476,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etPgDegree"
-                android:hint="Degree"
+                android:hint="@string/degree"
                 android:inputType="textCapSentences"
                 android:textSize="18dp"
                 />
@@ -495,7 +495,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etPgCGPA"
-                android:hint="CGPA/Percentage of passing"
+                android:hint="@string/CGPA"
                 android:inputType="phone"
                 android:textSize="18dp"
                 />
@@ -514,7 +514,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etPgBoard"
-                android:hint="Board/Institute"
+                android:hint="@string/educationBoard"
                 android:inputType="textCapSentences"
                 android:textSize="18dp"
                 />
@@ -533,7 +533,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etPgYOP"
-                android:hint="Year of passing"
+                android:hint="@string/year"
                 android:inputType="number"
                 android:textSize="18dp"
                 />

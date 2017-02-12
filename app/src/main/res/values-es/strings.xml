@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <!-- HOME TAB -->
+    <string name="homeTabHint">Utilice el botón \'+ \' para crear un CV</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="adText">Ver un anuncio para apoyar al desarrollador (haga clic aquí)</string>
+
+    <!-- HOME TAB NAMES -->
+    <string name="tabNameHome">CASA</string>
+    <string name="tabNameTemplate">PLANTILLAS</string>
+    <string name="tabNameFeedback">REALIMENTACIÓN</string>
+    <string name="deleteWarning">El elemento se eliminará.</string>
+    <string name="deleteSnackbarButton">CONFIRMAR</string>
+
+    <!-- TUTORIAL STRINGS -->
+    <string name="tutorialOptionsMenuTitle">Nuevas opciones de menú</string>
+    <string name="tutorialOptionsMenuContent">Echa un vistazo a las nuevas opciones de menú</string>
+
+    <string name="tutorialFABTitle">Empezar</string>
+    <string name="tutorialFABContent">Haga clic aquí para crear un nuevo CV</string>
+
+    <string name="tutorialInteractTitle">Nuevas formas de interactuar</string>
+    <string name="tutorialInteractContent">Haga clic en él para abrir el PDF \nHaga clic y manténgalo presionado para editar \nEliminar el dedo hacia la derecha para eliminarlo</string>
+
+    <!-- MENU OPTIONS -->
+    <string name="menuChangeTheme">Cambiar de tema</string>
+    <string name="menuRateUs">Califique Nosotros</string>
+    <string name="menuHelp">Ayuda</string>
+    <string name="menuTut">Tutorial de HelEnable</string>
+
+    <!-- FEEDBACK TAB -->
+    <string name="feedbackHintName">Nombre</string>
+    <string name="feedbackHintEmail">Dirección de correo electrónico</string>
+    <string name="feedbackHintComment">Comentario</string>
+    <string name="feedbackBtSubmitText">ENVIAR</string>
+    <string name="featureRequest">Si desea solicitar una función o una plantilla de CV, envíenos un correo electrónico a nksystems12@gmail.com</string>
+
+    <!-- HELP ACTIVITY -->
+    <string name="help1">Gracias por descargar CV Maker, las cosas han cambiado un poco desde nuestra última publicación.</string>
+    <string name="help2">Primero lo primero, la pantalla principal se ve un poco diferente.</string>
+    <string name="help3">Puede hacer clic en la lista para abrir el archivo pdf o haga clic y mantenga presionado para editar sus datos.</string>
+    <string name="help4">Utilice la pestaña Plantillas para ver las plantillas existentes y utilice la pestaña Comentarios para enviar comentarios directamente a nosotros</string>
+    <string name="help5">Ahora tiene algunas opciones en el menú, no dude en explorar y cambiar el tema a algo que te gusta.</string>
+    <string name="help6">Por ejemplo, elegir el color rosa como tema ...</string>
+    <string name="help7">Utilice el botón + para comenzar a crear un nuevo CV.</string>
+    <string name="help8">Desliza el dedo hacia la izquierda o la derecha en el formulario para cambiar de sección, el indicador inferior mostrará tu progreso mientras deslices.</string>
+    <string name="help9">También puede desplazarse a la derecha en su CV para eliminarlo \nNOTA: El archivo pdf seguirá existiendo en su almacenamiento.</string>
+    <string name="help10">Si alguna vez quieres volver a leer esta ayuda, usa la opción \'Ayuda\' en el menú.</string>
+    <string name="helpButton">Volver al Menú</string>
+
+    <!-- RESUME PAGE HEADERS -->
+    <string-array name="resumePages">
+        <item>Informacion personal (1/9)</item>
+        <item>Detalles de la educación (2/9)</item>
+        <item>Proceso de dar un título (3/9)</item>
+        <item>Experiencia (4/9)</item>
+        <item>Logros (5/9)</item>
+        <item>Habilidades (6/9)</item>
+        <item>Extra curricular (7/9)</item>
+        <item>Intereses personales (8/9)</item>
+        <item>Subida de fotos (9/9)</item>
+    </string-array>
+
+    <!-- PERSONAL DETAILS -->
+    <string name="personalFilename">Filename</string>
+    <string name="personalObjective">Objective</string>
+    <string-array name="title">
+        <item>señor</item>
+        <item>señorita</item>
+        <item>señora</item>
+        <item>Dr.</item>
+    </string-array>
+    <string name="personalFName">Nombre de pila</string>
+    <string name="personalLName">El nombre de familia</string>
+    <string name="personalEmail">Email</string>
+    <string name="personalAddress">Dirección</string>
+
+
+    <!-- EDUCATION -->
+    <string name="CGPA">CGPA / Porcentaje de pases</string>
+    <string name="educationSchool">Escuela / Instituto</string>
+    <string name="educationBoard">Junta educativa</string>
+    <string name="year">Año de Graduación</string>
+    <string name="collegeName">Nombre del colegio</string>
+    <string name="degree">El grado</string>
+
+    <!-- CERTIFICATION -->
+    <string name="certificationTitle">Título de la certificación</string>
+    <string name="certificationYear">Año de Certificación</string>
+
+    <!-- EXPERIENCE -->
+    <string name="companyName">Nombre de empresa</string>
+    <string name="duration">Duración Ex. Oct 2013 - En curso</string>
+    <string name="role">Función / designación</string>
+    <string name="jobDescription">Descripción</string>
+
+    <!-- ACHHIEVES -->
+    <string name="achieve1">Logro 1</string>
+    <string name="achieve2">Logro 2</string>
+    <string name="achieve3">Logro 3</string>
+    <string name="achieve4">Logro 4</string>
+    <string name="achieve5">Logro 5</string>
+    <string name="achieve6">Logro 6</string>
+
+    <!-- SKILLS -->
+    <string name="skillTitle">Ex. Idiomas</string>
+    <string name="skillinfo">JAVA,C++</string>
+
+    <!-- EXTRA -->
+    <string name="ec1">Actividad 1</string>
+    <string name="ec2">Actividad 2</string>
+    <string name="ec3">Actividad 3</string>
+    <string name="ec4">Actividad 4</string>
+    <string name="ec5">Actividad 5</string>
+    <string name="ec6">Actividad 6</string>
+
+    <string name="personalInterest">Intereses personales / Pasatiempos</string>
+
+</resources>

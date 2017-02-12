@@ -148,8 +148,7 @@ public class CreateResume extends AppCompatActivity {
     SimpleDateFormat dateFormat= new SimpleDateFormat("dd/MM/yyyy");
     private ResumeAdapter resumeAdapter;
     ViewPager viewPager;
-    private String[] resumeTabs={"Personal Information (1/9)","Education Details (2/9)","Certification (3/9)","Experience (4/9)",
-            "Achievements (5/9)","Skills (6/9)","Extra-Curriculars (7/9)","Personal Interests (8/9)","Photo Upload (9/9)"};
+
     ViewPager pagerRoot;
     PersonalDetails personalDetails;
     EducationDetails educationDetails;
@@ -287,6 +286,9 @@ public class CreateResume extends AppCompatActivity {
 
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+
+            private String[] resumeTabs=CreateResume.this.getResources().getStringArray(R.array.resumePages);
+
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels){
                 setTitle(resumeTabs[viewPager.getCurrentItem()]);
@@ -518,8 +520,6 @@ public class CreateResume extends AppCompatActivity {
                         personal[6]=etCode.getText().toString();
                         personal[7]=etPhone.getText().toString();
                         personal[8]=etAdress.getText().toString();
-
-                        Log.i("test",personal[2]);
 
                         int nullCount=0;
                         for(int i=0;i<personal.length;i++){
@@ -799,36 +799,137 @@ public class CreateResume extends AppCompatActivity {
     }
 
     private void createDefaultTemplate(Document pdfDocument, Cursor myCursor) throws DocumentException{
-        if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
-                (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
-                        myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
-                        myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
-            
-            Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
-                    myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
-                    notoFont);
-            //notoFont
-            paraName.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraName);
+        // If image is added
+        if(myCursor.getString(myCursor.getColumnIndex("imagename")) != null &&
+                myCursor.getString(myCursor.getColumnIndex("imagename")) != "" &&
+                myCursor.getString(myCursor.getColumnIndex("imagename")).length()>0){
+            // If firstname or lastname or email or address is added
+            if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("email")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("address")).length()>0)
+                    ){
+                // Then create a table with two columns. One for personal details, second for image
+                float[] columnWidths = {6,4};
+                PdfPTable titleTable = new PdfPTable(columnWidths);
+                titleTable.setWidthPercentage(100);
+                titleTable.getDefaultCell().setUseAscender(true);
+                titleTable.getDefaultCell().setUseDescender(true);
+
+                PdfPCell titleHeader1 = new PdfPCell();
+                titleHeader1.setBorder(Rectangle.NO_BORDER);
+                titleHeader1.setHorizontalAlignment(Element.ALIGN_LEFT);
+                if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                        (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                                myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                                myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
+
+                    Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
+                            myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
+                            notoFont);
+                    //notoFont
+                    paraName.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraName);
+                }
+                if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
+                    Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")) + " | " +
+                            myCursor.getString(myCursor.getColumnIndex("phoneext"))+" "+myCursor.getString(myCursor.getColumnIndex("phoneno")),
+                            notoFont);
+                    paraEmail.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraEmail);
+                }
+                if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
+                    Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
+                            notoFont);
+                    paraAddress.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraAddress);
+                }
+                titleTable.addCell(titleHeader1);
+
+
+                try{
+                    Image profile = Image.getInstance(Environment.getExternalStorageDirectory()+File.separator+"CVMaker"+File.separator+
+                            myCursor.getString(myCursor.getColumnIndex("imagename")));
+
+                    profile.scaleToFit(130,130);
+                    profile.setBorder(Rectangle.BOX);
+                    profile.setBorderWidth(10);
+                    profile.setAlignment(Element.ALIGN_CENTER);
+
+                    PdfPCell titleHeader2 = new PdfPCell(profile);
+                    titleHeader2.setBorder(Rectangle.NO_BORDER);
+                    titleHeader2.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    titleTable.addCell(titleHeader2);
+                }
+                catch(Exception e){
+
+                }
+
+                pdfDocument.add(titleTable);
+            }
+            else{
+                // If only image has been added
+                try{
+                    Image profile = Image.getInstance(Environment.getExternalStorageDirectory()+File.separator+"CVMaker"+File.separator+
+                            myCursor.getString(myCursor.getColumnIndex("imagename")));
+                    profile.scaleToFit(130,130);
+                    profile.setAlignment(Element.ALIGN_CENTER);
+                    profile.setBorder(Rectangle.BOX);
+                    profile.setBorderWidth(10);
+                    pdfDocument.add(profile);
+                }
+                catch(Exception e){
+
+                }
+            }
         }
-        if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
-            Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")) + " | " +
-                    myCursor.getString(myCursor.getColumnIndex("phoneext"))+" "+myCursor.getString(myCursor.getColumnIndex("phoneno")),
-                    notoFont);
-            paraEmail.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraEmail);
-        }
-        if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
-            Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
-                    notoFont);
-            paraAddress.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraAddress);
+        else{
+            // If image not added
+            if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
+
+                Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
+                        myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
+                        notoFont);
+                //notoFont
+                paraName.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraName);
+            }
+            if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
+                Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")) + " | " +
+                        myCursor.getString(myCursor.getColumnIndex("phoneext"))+" "+myCursor.getString(myCursor.getColumnIndex("phoneno")),
+                        notoFont);
+                paraEmail.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraEmail);
+            }
+            if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
+                Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
+                        notoFont);
+                paraAddress.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraAddress);
+            }
         }
         if(myCursor.getString(myCursor.getColumnIndex("objective")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("objective")) != "" &&
@@ -1248,34 +1349,138 @@ public class CreateResume extends AppCompatActivity {
 
     private void createNMIMSTemplate(Document pdfDocument, Cursor myCursor) throws DocumentException{
         float[] columnWidths = {1, 5, 5};
-        if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
-                (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
-                        myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
-                        myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
-            Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
-                    myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
-                    notoFont);
-            paraName.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraName);
+        // If image is added
+        if(myCursor.getString(myCursor.getColumnIndex("imagename")) != null &&
+                myCursor.getString(myCursor.getColumnIndex("imagename")) != "" &&
+                myCursor.getString(myCursor.getColumnIndex("imagename")).length()>0){
+            // If firstname or lastname or email or address is added
+            if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("email")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("address")).length()>0)
+                    ){
+                // Then create a table with two columns. One for personal details, second for image
+                float[] columnWidthsTitle = {6,4};
+                PdfPTable titleTable = new PdfPTable(columnWidthsTitle);
+                titleTable.setWidthPercentage(100);
+                titleTable.getDefaultCell().setUseAscender(true);
+                titleTable.getDefaultCell().setUseDescender(true);
+
+                PdfPCell titleHeader1 = new PdfPCell();
+                titleHeader1.setBorder(Rectangle.NO_BORDER);
+                titleHeader1.setHorizontalAlignment(Element.ALIGN_LEFT);
+                if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                        (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                                myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                                myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
+
+                    Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
+                            myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
+                            notoFont);
+                    //notoFont
+                    paraName.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraName);
+                }
+                if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
+                    Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")) + " | " +
+                            myCursor.getString(myCursor.getColumnIndex("phoneext"))+" "+myCursor.getString(myCursor.getColumnIndex("phoneno")),
+                            notoFont);
+                    paraEmail.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraEmail);
+                }
+                if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
+                    Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
+                            notoFont);
+                    paraAddress.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraAddress);
+                }
+                titleTable.addCell(titleHeader1);
+
+
+                try{
+                    Image profile = Image.getInstance(Environment.getExternalStorageDirectory()+File.separator+"CVMaker"+File.separator+
+                            myCursor.getString(myCursor.getColumnIndex("imagename")));
+
+                    profile.scaleToFit(130,130);
+                    profile.setBorder(Rectangle.BOX);
+                    profile.setBorderWidth(10);
+                    profile.setAlignment(Element.ALIGN_CENTER);
+
+                    PdfPCell titleHeader2 = new PdfPCell(profile);
+                    titleHeader2.setBorder(Rectangle.NO_BORDER);
+                    titleHeader2.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    titleTable.addCell(titleHeader2);
+                }
+                catch(Exception e){
+
+                }
+
+                pdfDocument.add(titleTable);
+            }
+            else{
+                // If only image has been added
+                try{
+                    Image profile = Image.getInstance(Environment.getExternalStorageDirectory()+File.separator+"CVMaker"+File.separator+
+                            myCursor.getString(myCursor.getColumnIndex("imagename")));
+                    profile.scaleToFit(130,130);
+                    profile.setAlignment(Element.ALIGN_CENTER);
+                    profile.setBorder(Rectangle.BOX);
+                    profile.setBorderWidth(10);
+                    pdfDocument.add(profile);
+                }
+                catch(Exception e){
+
+                }
+            }
         }
-        if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
-            Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")) + " | " +
-                    myCursor.getString(myCursor.getColumnIndex("phoneext"))+" "+myCursor.getString(myCursor.getColumnIndex("phoneno")),
-                    notoFont);
-            paraEmail.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraEmail);
-        }
-        if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
-            Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
-                    notoFont);
-            paraAddress.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraAddress);
+        else{
+            // If image not added
+            if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
+
+                Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
+                        myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
+                        notoFont);
+                //notoFont
+                paraName.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraName);
+            }
+            if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
+
+                Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")) + " | " +
+                        myCursor.getString(myCursor.getColumnIndex("phoneext"))+" "+myCursor.getString(myCursor.getColumnIndex("phoneno")),
+                        notoFont);
+                paraEmail.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraEmail);
+            }
+            if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
+                Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
+                        notoFont);
+                paraAddress.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraAddress);
+            }
         }
         if(myCursor.getString(myCursor.getColumnIndex("objective")) != null &&
                 myCursor.getString(myCursor.getColumnIndex("objective")) != "" &&
@@ -1771,41 +1976,155 @@ public class CreateResume extends AppCompatActivity {
     }
 
     private void createHarvardTemplate(Document pdfDocument, Cursor myCursor) throws DocumentException{
-        if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
-                (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
-                        myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
-                        myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
-            Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
-                    myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
-                    notoFont);
-            paraName.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraName);
+        // If image is added
+        if(myCursor.getString(myCursor.getColumnIndex("imagename")) != null &&
+                myCursor.getString(myCursor.getColumnIndex("imagename")) != "" &&
+                myCursor.getString(myCursor.getColumnIndex("imagename")).length()>0){
+            // If firstname or lastname or email or address or phoneno is added
+            if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("email")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("address")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("phoneno")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("phoneno")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("phoneno")).length()>0)
+                    ){
+                // Then create a table with two columns. One for personal details, second for image
+                float[] columnWidthsTitle = {6,4};
+                PdfPTable titleTable = new PdfPTable(columnWidthsTitle);
+                titleTable.setWidthPercentage(100);
+                titleTable.getDefaultCell().setUseAscender(true);
+                titleTable.getDefaultCell().setUseDescender(true);
+
+                PdfPCell titleHeader1 = new PdfPCell();
+                titleHeader1.setBorder(Rectangle.NO_BORDER);
+                titleHeader1.setHorizontalAlignment(Element.ALIGN_LEFT);
+                if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                        (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                                myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                                myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
+
+                    Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
+                            myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
+                            notoFont);
+                    //notoFont
+                    paraName.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraName);
+                }
+                if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
+                    Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
+                            notoFont);
+                    paraAddress.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraAddress);
+                }
+                if(myCursor.getString(myCursor.getColumnIndex("phoneno")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("phoneno")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("phoneno")).length()>0){
+                    Paragraph paraContact = new Paragraph(myCursor.getString(myCursor.getColumnIndex("phoneext")) + " " +
+                            myCursor.getString(myCursor.getColumnIndex("phoneno")), notoFont);
+                    paraContact.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraContact);
+                }
+                if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                        myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                        myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
+                    Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")),
+                            notoFont);
+                    paraEmail.setAlignment(Element.ALIGN_LEFT);
+                    titleHeader1.addElement(paraEmail);
+                }
+                titleTable.addCell(titleHeader1);
+
+
+                try{
+                    Image profile = Image.getInstance(Environment.getExternalStorageDirectory()+File.separator+"CVMaker"+File.separator+
+                            myCursor.getString(myCursor.getColumnIndex("imagename")));
+
+                    profile.scaleToFit(130,130);
+                    profile.setBorder(Rectangle.BOX);
+                    profile.setBorderWidth(10);
+                    profile.setAlignment(Element.ALIGN_CENTER);
+
+                    PdfPCell titleHeader2 = new PdfPCell(profile);
+                    titleHeader2.setBorder(Rectangle.NO_BORDER);
+                    titleHeader2.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    titleTable.addCell(titleHeader2);
+                }
+                catch(Exception e){
+
+                }
+
+                pdfDocument.add(titleTable);
+            }
+            else{
+                // If only image has been added
+                try{
+                    Image profile = Image.getInstance(Environment.getExternalStorageDirectory()+File.separator+"CVMaker"+File.separator+
+                            myCursor.getString(myCursor.getColumnIndex("imagename")));
+                    profile.scaleToFit(130,130);
+                    profile.setAlignment(Element.ALIGN_CENTER);
+                    profile.setBorder(Rectangle.BOX);
+                    profile.setBorderWidth(10);
+                    pdfDocument.add(profile);
+                }
+                catch(Exception e){
+
+                }
+            }
         }
-        if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
-            Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
-                    notoFont);
-            paraAddress.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraAddress);
-        }
-        if(myCursor.getString(myCursor.getColumnIndex("phoneno")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("phoneno")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("phoneno")).length()>0){
-            Paragraph paraContact = new Paragraph(myCursor.getString(myCursor.getColumnIndex("phoneext")) + " " +
-                    myCursor.getString(myCursor.getColumnIndex("phoneno")), notoFont);
-            paraContact.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraContact);
-        }
-        if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
-                myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
-                myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
-            Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")),
-                    notoFont);
-            paraEmail.setAlignment(Element.ALIGN_CENTER);
-            pdfDocument.add(paraEmail);
+        else{
+            // If image not added
+            if((myCursor.getString(myCursor.getColumnIndex("firstname")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("firstname")).length()>0) ||
+                    (myCursor.getString(myCursor.getColumnIndex("lastname")) != null &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")) != "" &&
+                            myCursor.getString(myCursor.getColumnIndex("lastname")).length()>0)){
+
+                Paragraph paraName = new Paragraph(myCursor.getString(myCursor.getColumnIndex("title"))+" "+
+                        myCursor.getString(myCursor.getColumnIndex("firstname"))+" "+myCursor.getString(myCursor.getColumnIndex("lastname")),
+                        notoFont);
+                //notoFont
+                paraName.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraName);
+            }
+            if(myCursor.getString(myCursor.getColumnIndex("address")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("address")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("address")).length()>0){
+                Paragraph paraAddress = new Paragraph(myCursor.getString(myCursor.getColumnIndex("address")),
+                        notoFont);
+                paraAddress.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraAddress);
+            }
+            if(myCursor.getString(myCursor.getColumnIndex("phoneno")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("phoneno")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("phoneno")).length()>0){
+                Paragraph paraContact = new Paragraph(myCursor.getString(myCursor.getColumnIndex("phoneext")) + " " +
+                        myCursor.getString(myCursor.getColumnIndex("phoneno")), notoFont);
+                paraContact.setAlignment(Element.ALIGN_LEFT);
+                pdfDocument.add(paraContact);
+            }
+            if(myCursor.getString(myCursor.getColumnIndex("email")) != null &&
+                    myCursor.getString(myCursor.getColumnIndex("email")) != "" &&
+                    myCursor.getString(myCursor.getColumnIndex("email")).length()>0){
+
+                Paragraph paraEmail = new Paragraph(myCursor.getString(myCursor.getColumnIndex("email")),
+                        notoFont);
+                paraEmail.setAlignment(Element.ALIGN_CENTER);
+                pdfDocument.add(paraEmail);
+            }
         }
 
         if(myCursor.getString(myCursor.getColumnIndex("objective")) != null &&

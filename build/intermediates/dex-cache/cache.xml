@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="1fdd45b445af24c16fca9e9354ba5f31556bb90e">
+        sha1="b2a377fdab7de8d7866703af20bba21766d7412b">
         <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_704c3fe3af9f0ddd2935ce7e16e69cf26e26ed2d\classes.dex" />
     </item>
     <item
@@ -133,7 +133,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="4ba7093a5dd71970f7c0abde26303b27deca99ef">
+        sha1="1585ac12214aedaa6681b29e38f811dab79e6947">
         <dex dex="G:\AndroidStudioProjects\CV_Maker\default\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_fc4da281e1fa706718138258940c0980a1807456\classes.dex" />
     </item>
     <item
