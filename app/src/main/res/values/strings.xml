@@ -210,5 +210,17 @@
     <string name="ec6">Activity 6</string>
 
     <string name="personalInterest">Personal Interests/Hobbies</string>
+    <string name="photoButton">Select Image</string>
+    <string name="photoRemove">Remove Photo</string>
+    <string name="photoNote">NOTE: The picture works best with a square image. Best performance is gained by using 200x200 images.</string>
+
+
+    <string name="feedbackAllWarning">All fields are mandatory.</string>
+    <string name="feedbackEmailWarning">Please enter a valid email.</string>
+    <string name="feedbackSuccess">Message successfully sent!</string>
+    <string name="feedbackFailure">There was some error in sending message. Please try again after some time.</string>
+    <string name="resumeBackWarning">You will lose any unsaved data.\nPress the back button to go back anyways.</string>
+    <string name="resumeEmailWarning">Enter Valid Birthdate</string>
+    <string name="resumePersonalWarning">Filename/Personal details are mandatory</string>
 
 </resources>

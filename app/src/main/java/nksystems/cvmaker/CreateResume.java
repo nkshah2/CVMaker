@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -18,7 +19,6 @@ import android.os.Debug;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -168,7 +168,7 @@ public class CreateResume extends AppCompatActivity {
     public void onBackPressed() {
         if(backCount==0){
             backCount++;
-            Toast.makeText(this,"You will lose any unsaved data. \n Press the back button to go back anyways.",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,CreateResume.this.getResources().getString(R.string.resumeBackWarning),Toast.LENGTH_LONG).show();
         }else {
             finish();
             startActivity(new Intent(CreateResume.this,ActivityMain.class));
@@ -559,11 +559,11 @@ public class CreateResume extends AppCompatActivity {
                                     throw new RuntimeException("Error generating file: ", e);
                                 }
                             }else{
-                                Toast.makeText(CreateResume.this, "Enter Valid Birthdate", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CreateResume.this, CreateResume.this.getResources().getString(R.string.resumeEmailWarning), Toast.LENGTH_SHORT).show();
                             }
 
                         }else{
-                            Toast.makeText(CreateResume.this,"Filename/Personal details are mandatory",Toast.LENGTH_LONG).show();
+                            Toast.makeText(CreateResume.this,CreateResume.this.getResources().getString(R.string.resumePersonalWarning),Toast.LENGTH_LONG).show();
                         }
 
             }
@@ -721,6 +721,9 @@ public class CreateResume extends AppCompatActivity {
 
         personalInterest=etHobby.getText().toString();
         String profilePhotoName = String.valueOf(profilePhoto.getTag());
+        if(((BitmapDrawable)profilePhoto.getDrawable()).getBitmap()==null){
+            profilePhotoName="";
+        }
 
         dbQueries = new DatabaseQueries(CreateResume.this);
         dbQueries.addPersonalInfo(filename,objective,firstName,lastName,template,DOB,email,ext,phone,adress,title);

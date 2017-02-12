@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="title_activity_loading">Loading</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_test">test</string>
+    <string name="objective">Objective</string>
+    <string name="full_name">Your Full Name</string>
+    <string name="homepagead">ca-app-pub-2342189677319514/1490934981</string>
+    <string name="templatespagead">ca-app-pub-2342189677319514/2967668185</string>
+    <string name="statspagead">ca-app-pub-2342189677319514/4444401382</string>
+
+    <string-array name="templates">
+        <item>Default</item>
+        <item>NMIMS</item>
+        <item>Harvard</item>
+    </string-array>
+
+    <string-array name="colors">
+        <item>#EF9A9A</item>
+        <item>#9FA8DA</item>
+        <item>#FFE082</item>
+    </string-array>
+    <string-array name="temps">
+        <item>harvard</item>
+        <item>nmims</item>
+        <item>default</item>
+    </string-array>
+    <string-array name="redCols">
+        <item>#D32F2F</item>
+        <item>#C62828</item>
+        <item>#F44336</item>
+    </string-array>
+    <string-array name="pinkCols">
+        <item>#C2185B</item>
+        <item>#AD1457</item>
+        <item>#E91E63</item>
+    </string-array>
+    <string-array name="purpleCols">
+        <item>#512DA8</item>
+        <item>#4527A0</item>
+        <item>#673AB7</item>
+    </string-array>
+    <string-array name="indigoCols">
+        <item>#303F9F</item>
+        <item>#283593</item>
+        <item>#3F51B5</item>
+    </string-array>
+    <string-array name="greenCols">
+        <item>#00796B</item>
+        <item>#00695C</item>
+        <item>#009688</item>
+    </string-array>
+    <string-array name="yellowCols">
+        <item>#FFA000</item>
+        <item>#FF8F00</item>
+        <item>#FFC107</item>
+    </string-array>
+    <string-array name="orangeCols">
+        <item>#E64A19</item>
+        <item>#D84315</item>
+        <item>#FF5722</item>
+    </string-array>
+    <string-array name="greyCols">
+        <item>#455A64</item>
+        <item>#37474F</item>
+        <item>#607D8B</item>
+    </string-array>
+
+    <string-array name="themeColors">
+        <item>Red</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Grey</item>
+
+    </string-array>
+
+
+
+
+
     <string name="app_name">CV Maker</string>
 
     <!-- HOME TAB -->
@@ -118,6 +201,29 @@
     <string name="ec5">Activité 5</string>
     <string name="ec6">Activité 6</string>
 
+
+    <string-array name="dropdownItems">
+        <item>--Sélectionner l\'éducation la plus élevée--</item>
+        <item>10th</item>
+        <item>12th(École secondaire)</item>
+        <item>Diploma(10 + 3)</item>
+        <item>Under Graduate</item>
+        <item>Post Graduate</item>
+
+    </string-array>
+
     <string name="personalInterest">Intérêts personnels / Loisirs</string>
+    <string name="photoButton">Sélectionner une image</string>
+    <string name="photoRemove">Supprimer la photo</string>
+    <string name="photoNote">REMARQUE: L\'image fonctionne mieux avec une image carrée. Les meilleures performances sont obtenues en utilisant 200x200 images.</string>
+
+
+    <string name="feedbackAllWarning">Tous les champs sont obligatoires.</string>
+    <string name="feedbackEmailWarning">Veuillez saisir un e-mail valide.</string>
+    <string name="feedbackSuccess">Message envoyé avec succès!</string>
+    <string name="feedbackFailure">Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer après un certain temps.</string>
+    <string name="resumeBackWarning">Vous perdrez toutes les données non sauvegardées. \nAppuyez sur le bouton retour pour revenir en arrière.</string>
+    <string name="resumeEmailWarning">Entrer une date de naissance valide</string>
+    <string name="resumePersonalWarning">Nom du fichier / Données personnelles sont obligatoires</string>
 
 </resources>

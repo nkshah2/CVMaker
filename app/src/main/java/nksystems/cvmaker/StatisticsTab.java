@@ -90,13 +90,13 @@ public class StatisticsTab extends Fragment {
                 if(TextUtils.isEmpty(etEmail.getText().toString()) ||
                         TextUtils.isEmpty(etName.getText().toString()) || TextUtils.isEmpty(etComment.getText().toString()))
                 {
-                    Toast.makeText(StatisticsTab.this.getContext(),"All fields are mandatory.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(StatisticsTab.this.getContext(),StatisticsTab.this.getResources().getString(R.string.feedbackAllWarning),Toast.LENGTH_LONG).show();
                     return;
                 }
                 //Check if a valid email is entered
                 if(!android.util.Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches())
                 {
-                    Toast.makeText(StatisticsTab.this.getContext(),"Please enter a valid email.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(StatisticsTab.this.getContext(),StatisticsTab.this.getResources().getString(R.string.feedbackEmailWarning),Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -225,7 +225,7 @@ public class StatisticsTab extends Fragment {
         @Override
         protected void onPostExecute(Boolean result){
             //Print Success or failure message accordingly
-            Toast.makeText(StatisticsTab.this.getContext(),result?"Message successfully sent!":"There was some error in sending message. Please try again after some time.",Toast.LENGTH_LONG).show();
+            Toast.makeText(StatisticsTab.this.getContext(),result?StatisticsTab.this.getResources().getString(R.string.feedbackSuccess):StatisticsTab.this.getResources().getString(R.string.feedbackFailure),Toast.LENGTH_LONG).show();
             startActivity(new Intent(StatisticsTab.this.getContext(),ActivityMain.class));
         }
 

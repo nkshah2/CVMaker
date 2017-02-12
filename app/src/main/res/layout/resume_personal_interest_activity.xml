@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/etHobbies"
-            android:hint="Personal Interests/Hobbies"
+            android:hint="@string/personalInterest"
             android:inputType="textMultiLine|textCapSentences"
             android:maxLines="6"
             android:nestedScrollingEnabled="true"

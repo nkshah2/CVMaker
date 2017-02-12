@@ -23,25 +23,46 @@
 
             <!-- Capture picture button -->
 
-            <Button
-                android:id="@+id/btnCapturePicture"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:background="@color/colorPrimary"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:text="Select Image"
-                android:textColor="@color/white" />
+
 
             <ImageView
                 android:id="@+id/imgPreview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:visibility="gone"
                 android:layout_marginTop="15dp"
                 android:scaleType="fitXY"
                 android:layout_gravity="center_horizontal|center_vertical"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/photoRemove"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnRemovePhoto"
+                />
+
+
+            <Button
+                android:id="@+id/btnCapturePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/photoButton"
+                android:layout_gravity="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="@string/photoNote"
                 />
 
         </LinearLayout>
